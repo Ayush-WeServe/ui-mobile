@@ -29,9 +29,9 @@ class TabbarWidget extends StatelessWidget {
                     icon: Icon(Icons.chat_outlined), label: ''),
               ],
               currentIndex: tabController.selectedIndex.value,
-              selectedItemColor: AppColors.lightScaffold,
-              selectedIconTheme: IconThemeData(
-                  color: AppColors.lightScaffold, size: AppSizes.buttonMD),
+              selectedItemColor: AppColors.dark,
+              selectedIconTheme:
+                  IconThemeData(color: Colors.grey, size: AppSizes.buttonMD),
               unselectedItemColor: AppColors.dark,
               onTap: tabController.onItemTapped,
             ),

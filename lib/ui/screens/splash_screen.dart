@@ -22,13 +22,21 @@ class SplashScreen extends StatelessWidget {
               flex: 6,
               child: Center(child: Image.asset(AppImages.splash)),
             ),
-            Text(
-              AppStrings.headLine,
-              style: AppStyles.headlineSmall,
+            Expanded(
+              child: Flexible(
+                child: Text(
+                  AppStrings.headLine,
+                  style: AppStyles.headlineSmall,
+                ),
+              ),
             ),
-            Text(
-              AppStrings.subTitle,
-              style: AppStyles.labelMedium,
+            Expanded(
+              child: Flexible(
+                child: Text(
+                  AppStrings.subTitle,
+                  style: AppStyles.labelMedium,
+                ),
+              ),
             ),
             SizedBox(
                 height: AppSizes.buttonSM,
