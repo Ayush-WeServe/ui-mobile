@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ui_mobile/bindings/tab_binding.dart';
-import 'package:ui_mobile/ui/common/tabbar_widget.dart';
-
 import 'utils/constants/routes.dart';
 import 'utils/themes/theme.dart';
 
@@ -19,9 +17,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: AppThemes.lightTheme,
       getPages: AppRoutes.routes,
-      // initialRoute: AppRouteNames.splash,
+      initialRoute: AppRouteNames.splash,
       initialBinding: TabBinding(),
-      home: TabbarWidget(),
     );
   }
 }

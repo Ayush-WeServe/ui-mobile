@@ -5,6 +5,6 @@ import '../controllers/tab_controller.dart';
 class TabBinding extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut(() => CustomTabController());
+    Get.lazyPut(() => TabBarController());
   }
 }
