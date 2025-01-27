@@ -69,4 +69,14 @@ class AppStyles {
       fontSize: AppSizes.fontsLabelLarge,
       color: AppColors.lightScaffold,
       overflow: TextOverflow.ellipsis);
+
+  static final TextStyle? heading = TextStyle(
+    fontWeight: FontWeight.w700,
+    fontSize: AppSizes.fontsHeadlineSmall,
+  );
+
+  static final TextStyle? smallHeading = TextStyle(
+    fontWeight: FontWeight.w500,
+    fontSize: AppSizes.fontsLabelMedium,
+  );
 }
