@@ -9,6 +9,7 @@ class IconContainer extends StatelessWidget {
   final onTap;
   final Color? backcolor;
   final bool border;
+  final Color? iconColor;
 
   const IconContainer(
       {super.key,
@@ -16,7 +17,8 @@ class IconContainer extends StatelessWidget {
       required this.icon,
       required this.onTap,
       this.backcolor,
-      this.border = true});
+      this.border = true,
+      this.iconColor});
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +32,11 @@ class IconContainer extends StatelessWidget {
                     color: AppColors.dark,
                   )
                 : null),
-        child: IconButton(onPressed: onTap, icon: Icon(icon)));
+        child: IconButton(
+            onPressed: onTap,
+            icon: Icon(
+              icon,
+              color: iconColor,
+            )));
   }
 }

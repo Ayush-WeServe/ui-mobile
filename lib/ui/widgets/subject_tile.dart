@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:ui_mobile/utils/constants/routes.dart';
 import 'package:ui_mobile/utils/constants/styles.dart';
 
 import '../../utils/constants/colors.dart';
@@ -38,7 +40,9 @@ class SubjectTile extends StatelessWidget {
           ),
         ),
       ),
-      onTap: () {},
+      onTap: () {
+        Get.toNamed(AppRouteNames.subjectScreen, arguments: sub);
+      },
     );
   }
 }

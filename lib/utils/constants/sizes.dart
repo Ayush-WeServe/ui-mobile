@@ -50,4 +50,5 @@ class AppSizes {
   static const double radiusMD = 16;
   static const double radiusLG = 24;
   static const double radiusXL = 32;
+  static const double radiusXXL = 120;
 }
