@@ -58,7 +58,7 @@ class LectureScreen extends StatelessWidget {
                             IconContainer(
                                 icon: Icons.keyboard_arrow_left_outlined,
                                 onTap: () {
-                                  Get.off(AppRouteNames.tab);
+                                  Get.toNamed(AppRouteNames.tab);
                                 }),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.end,
