@@ -6,15 +6,17 @@ import '../../utils/constants/colors.dart';
 class IconContainer extends StatelessWidget {
   final bool color;
   final IconData icon;
-  final Function onTap;
+  final onTap;
   final Color? backcolor;
+  final bool border;
 
   const IconContainer(
       {super.key,
       this.color = false,
       required this.icon,
       required this.onTap,
-      this.backcolor});
+      this.backcolor,
+      this.border = true});
 
   @override
   Widget build(BuildContext context) {
@@ -22,10 +24,12 @@ class IconContainer extends StatelessWidget {
         decoration: BoxDecoration(
             color: color ? backcolor : AppColors.lightScaffold,
             borderRadius: BorderRadius.circular(AppSizes.radiusMD),
-            border: Border.all(
-              width: 0.5,
-              color: AppColors.dark,
-            )),
-        child: IconButton(onPressed: () {}, icon: Icon(icon)));
+            border: border
+                ? Border.all(
+                    width: 0.5,
+                    color: AppColors.dark,
+                  )
+                : null),
+        child: IconButton(onPressed: onTap, icon: Icon(icon)));
   }
 }

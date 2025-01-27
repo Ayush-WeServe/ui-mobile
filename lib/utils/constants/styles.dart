@@ -63,4 +63,10 @@ class AppStyles {
       fontSize: AppSizes.fontsLabelMedium,
       color: AppColors.dark,
       overflow: TextOverflow.ellipsis);
+
+  static final TextStyle? selectedDate = TextStyle(
+      fontWeight: FontWeight.w600,
+      fontSize: AppSizes.fontsLabelLarge,
+      color: AppColors.lightScaffold,
+      overflow: TextOverflow.ellipsis);
 }

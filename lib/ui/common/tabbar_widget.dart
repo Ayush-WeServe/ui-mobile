@@ -22,6 +22,7 @@ class TabBarWidget extends StatelessWidget {
       () => Scaffold(
         body: pages[controller.selectedIndex.value],
         bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.transparent,
           currentIndex: controller.selectedIndex.value,
           onTap: controller.onItemTapped,
           selectedItemColor: Colors.black,

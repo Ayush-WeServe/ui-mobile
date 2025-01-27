@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ui_mobile/ui/widgets/custom_elevated_button.dart';
 import 'package:ui_mobile/utils/constants/colors.dart';
 import 'package:ui_mobile/utils/constants/images.dart';
 import 'package:ui_mobile/utils/constants/routes.dart';
@@ -38,21 +39,8 @@ class SplashScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
-                height: AppSizes.buttonSM,
-                width: 150,
-                child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: AppColors.dark),
-                    onPressed: () {
-                      Get.toNamed(AppRouteNames.tab);
-                    },
-                    child: Text(
-                      AppStrings.letsStart,
-                      style: TextStyle(
-                          fontSize: AppSizes.fontsBodySmall,
-                          color: AppColors.lightScaffold),
-                    )))
+            CustomElevatedButton(
+                text: AppStrings.letsStart, route: AppRouteNames.tab),
           ],
         ),
       ),

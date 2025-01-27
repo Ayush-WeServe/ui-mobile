@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:ui_mobile/ui/widgets/icon_container.dart';
+import 'package:ui_mobile/utils/constants/routes.dart';
 import '../../utils/constants/images.dart';
 import '../../utils/constants/sizes.dart';
 import '../../utils/constants/strings.dart';
@@ -41,7 +43,11 @@ class HomeScreenHeading extends StatelessWidget {
             ),
           ],
         ),
-        IconContainer(icon: Icons.notifications_active, onTap: () {})
+        IconContainer(
+            icon: Icons.notifications_active,
+            onTap: () {
+              Get.toNamed(AppRouteNames.notification);
+            })
       ],
     );
   }

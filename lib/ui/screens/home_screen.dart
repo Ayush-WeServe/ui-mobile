@@ -1,6 +1,4 @@
-import 'package:dot_navigation_bar/dot_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:ui_mobile/controllers/tab_controller.dart';
 import 'package:ui_mobile/ui/common/next_class_container.dart';
 import 'package:ui_mobile/ui/common/searchBar_widget.dart';
 import 'package:ui_mobile/ui/widgets/box_heading_container.dart';

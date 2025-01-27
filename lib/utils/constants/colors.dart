@@ -14,4 +14,5 @@ class AppColors {
 
   static final Color lightBlueBackground = Color(0xffECEDFF);
   static final Color lightYellowBackground = Color(0xffF6F6F9);
+  static final Color weekContainerBackground = Color(0xffF7F6F9);
 }

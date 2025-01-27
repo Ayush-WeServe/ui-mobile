@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:ui_mobile/bindings/tab_binding.dart';
 import 'package:ui_mobile/ui/screens/chat_screen.dart';
+import 'package:ui_mobile/ui/screens/notifications_screen.dart';
 import 'package:ui_mobile/ui/screens/schedule_screen.dart';
 import 'package:ui_mobile/ui/screens/subjects_screen.dart';
 import 'package:ui_mobile/ui/common/tabbar_widget.dart';
@@ -35,7 +36,11 @@ class AppRoutes {
     GetPage(
         name: AppRouteNames.tab,
         page: () => TabBarWidget(),
-        binding: TabBinding())
+        binding: TabBinding()),
+    GetPage(
+      name: AppRouteNames.notification,
+      page: () => NotificationsScreen(),
+    ),
   ];
 }
 
@@ -47,4 +52,5 @@ class AppRouteNames {
   static const String subjects = '/subjects';
   static const String schedule = '/schedule';
   static const String chat = '/chat';
+  static const String notification = '/notification-screen';
 }
