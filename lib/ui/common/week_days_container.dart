@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_mobile/ui/widgets/box_heading_container.dart';
 import 'package:ui_mobile/ui/widgets/days_list_widget.dart';
-import 'package:ui_mobile/utils/constants/styles.dart';
 
 import '../../utils/constants/colors.dart';
 import '../../utils/constants/sizes.dart';

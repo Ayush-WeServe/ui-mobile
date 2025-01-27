@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:ui_mobile/ui/widgets/custom_elevated_button.dart';
-import 'package:ui_mobile/utils/constants/colors.dart';
 import 'package:ui_mobile/utils/constants/images.dart';
 import 'package:ui_mobile/utils/constants/routes.dart';
 import 'package:ui_mobile/utils/constants/sizes.dart';
