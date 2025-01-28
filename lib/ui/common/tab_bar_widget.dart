@@ -4,6 +4,7 @@ import 'package:ui_mobile/ui/screens/library_screen.dart';
 import 'package:ui_mobile/ui/screens/subjects_screen.dart';
 import 'package:ui_mobile/utils/constants/colors.dart';
 import 'package:ui_mobile/utils/constants/sizes.dart';
+import 'package:ui_mobile/utils/constants/strings.dart';
 import 'package:ui_mobile/utils/constants/styles.dart';
 
 class TabBarWidget extends StatelessWidget {
@@ -28,13 +29,13 @@ class TabBarWidget extends StatelessWidget {
                   padding: EdgeInsets.symmetric(vertical: AppSizes.spacingMD),
                   tabs: <Widget>[
                     Tab(
-                      text: 'Subjects',
+                      text: AppStrings.subjects,
                     ),
                     Tab(
-                      text: 'Homework',
+                      text: AppStrings.homework,
                     ),
                     Tab(
-                      text: 'Library',
+                      text: AppStrings.library,
                     ),
                   ]),
             ),

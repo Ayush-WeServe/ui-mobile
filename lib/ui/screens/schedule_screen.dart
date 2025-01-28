@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:ui_mobile/ui/common/time_table.dart';
-import 'package:ui_mobile/ui/common/week_days_container.dart';
+import 'package:ui_mobile/ui/common/week_day_picker.dart';
 import 'package:ui_mobile/ui/widgets/icon_button_container.dart';
 import 'package:ui_mobile/utils/constants/colors.dart';
 import 'package:ui_mobile/utils/constants/sizes.dart';
+import 'package:ui_mobile/utils/constants/strings.dart';
 import 'package:ui_mobile/utils/constants/styles.dart';
 
 class ScheduleScreen extends StatelessWidget {
@@ -22,7 +23,7 @@ class ScheduleScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Schedule',
+                    AppStrings.schedule,
                     style: AppStyles.headlineMedium,
                   ),
                   IconButtonContainer(icon: Icons.search_outlined, onTap: () {})
@@ -30,32 +31,38 @@ class ScheduleScreen extends StatelessWidget {
               ),
               WeekDaysContainer(),
               TimeTable(
-                time: '8:00am',
-                subjectTime: ['Basic Mathematics', '08:00am - 8:45am'],
+                time: AppStrings.time8,
+                subjectTime: [AppStrings.basicMath, AppStrings.lectrureTime1],
                 backColor: AppColors.lightBlue,
                 align: Alignment.centerLeft,
               ),
               TimeTable(
-                time: '9:00am',
+                time: AppStrings.time9,
                 breakTime: true,
               ),
               TimeTable(
-                  time: '10:00am',
-                  subjectTime: ['English Grammer', '10:00am - 11:10am'],
+                  time: AppStrings.time10,
+                  subjectTime: [
+                    AppStrings.englishGramer,
+                    AppStrings.lectrureTime2
+                  ],
                   backColor: AppColors.lightGreen,
                   align: Alignment.centerRight),
               TimeTable(
-                time: '11:00am',
+                time: AppStrings.time11,
                 breakTime: true,
               ),
               TimeTable(
-                time: '12:00am',
-                subjectTime: ['Science', '12:00am - 12:45am'],
+                time: AppStrings.time12,
+                subjectTime: [AppStrings.science, AppStrings.lectrureTime3],
                 backColor: AppColors.lightYellow,
               ),
               TimeTable(
-                  time: '01:00am',
-                  subjectTime: ['World History', '01:00am - 1:50am'],
+                  time: AppStrings.time13,
+                  subjectTime: [
+                    AppStrings.wordHistory,
+                    AppStrings.lectrureTime4
+                  ],
                   backColor: AppColors.lightPink,
                   align: Alignment.centerRight),
             ],

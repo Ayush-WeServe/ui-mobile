@@ -3,6 +3,7 @@ import 'package:ui_mobile/ui/widgets/custom_elevated_button.dart';
 import 'package:ui_mobile/ui/widgets/icon_button_container.dart';
 import 'package:ui_mobile/utils/constants/colors.dart';
 import 'package:ui_mobile/utils/constants/images.dart';
+import 'package:ui_mobile/utils/constants/strings.dart';
 import 'package:ui_mobile/utils/constants/styles.dart';
 
 import '../../utils/constants/sizes.dart';
@@ -61,73 +62,66 @@ class NotificationWidget extends StatelessWidget {
       onTap: () {
         showModalBottomSheet(
             context: context,
-            elevation: 0,
             backgroundColor: backColor,
-            shape: RoundedRectangleBorder(
-              side: BorderSide.none,
-              borderRadius: BorderRadius.circular(AppSizes.radiusLG),
-            ),
             builder: (BuildContext context) {
-              return SingleChildScrollView(
-                child: SizedBox(
-                  width: double.infinity,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: AppSizes.paddingMD,
-                        vertical: AppSizes.paddingMD),
-                    child: Column(
-                      spacing: AppSizes.spacingLG,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        IconButtonContainer(icon: icon, onTap: () {}),
-                        Text(
-                          message,
-                          style: AppStyles.bodyLarge,
-                        ),
-                        Container(
-                          decoration: BoxDecoration(
-                              border: Border.all(width: 1),
-                              borderRadius:
-                                  BorderRadius.circular(AppSizes.radiusMD),
-                              color: AppColors.lightScaffold),
-                          child: Padding(
-                            padding: const EdgeInsets.all(AppSizes.paddingLG),
-                            child: Column(
-                              spacing: AppSizes.spacingXS,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  subject,
-                                  style: AppStyles.bodyLarge,
-                                ),
-                                Text(
-                                  'Today, 1:15pm',
-                                  style: AppStyles.bodyMedium,
-                                ),
-                                Row(
-                                  spacing: AppSizes.spacingSM,
-                                  children: [
-                                    ClipRRect(
-                                      borderRadius: BorderRadius.circular(
-                                          AppSizes.radiusMD),
-                                      child: Image.asset(
-                                        AppImages.jane,
-                                        height: AppSizes.imageXS,
-                                      ),
+              return SizedBox(
+                width: double.infinity,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: AppSizes.paddingMD,
+                      vertical: AppSizes.paddingMD),
+                  child: Column(
+                    spacing: AppSizes.spacingSM,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      IconButtonContainer(icon: icon, onTap: () {}),
+                      Text(
+                        message,
+                        style: AppStyles.bodyLarge,
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(width: 1),
+                            borderRadius:
+                                BorderRadius.circular(AppSizes.radiusMD),
+                            color: AppColors.lightScaffold),
+                        child: Padding(
+                          padding: const EdgeInsets.all(AppSizes.paddingLG),
+                          child: Column(
+                            spacing: AppSizes.spacingXS,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                subject,
+                                style: AppStyles.bodyLarge,
+                              ),
+                              Text(
+                                AppStrings.time1,
+                                style: AppStyles.bodyMedium,
+                              ),
+                              Row(
+                                spacing: AppSizes.spacingSM,
+                                children: [
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(
+                                        AppSizes.radiusMD),
+                                    child: Image.asset(
+                                      AppImages.jane,
+                                      height: AppSizes.imageXS,
                                     ),
-                                    Text('Eleanor Pena')
-                                  ],
-                                )
-                              ],
-                            ),
+                                  ),
+                                  Text(AppStrings.professor)
+                                ],
+                              )
+                            ],
                           ),
                         ),
-                        Center(
-                          child: CustomElevatedButton(
-                              text: 'Lessons Material', route: ''),
-                        )
-                      ],
-                    ),
+                      ),
+                      Center(
+                        child: CustomElevatedButton(
+                            text: AppStrings.lessonMaterial, route: ''),
+                      )
+                    ],
                   ),
                 ),
               );

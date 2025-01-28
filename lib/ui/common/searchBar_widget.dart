@@ -11,7 +11,6 @@ class SearchbarWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: AppSizes.paddingMD),
       child: Container(
-        // height: AppSizes.buttonMD,
         decoration: BoxDecoration(
             color: AppColors.inputFieldColor,
             borderRadius: BorderRadius.circular(AppSizes.radiusLG)),

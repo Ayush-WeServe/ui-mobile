@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ui_mobile/ui/widgets/icon_container.dart';
 import 'package:ui_mobile/utils/constants/colors.dart';
 import 'package:ui_mobile/utils/constants/sizes.dart';
+import 'package:ui_mobile/utils/constants/strings.dart';
 import 'package:ui_mobile/utils/constants/styles.dart';
 
 class SubjectContainer extends StatelessWidget {
@@ -11,7 +12,7 @@ class SubjectContainer extends StatelessWidget {
   final String professor;
   final String profileImage;
   final bool homeWorkStatus;
-  final Color container_color;
+  final Color containerColor;
 
   const SubjectContainer(
       {super.key,
@@ -21,7 +22,7 @@ class SubjectContainer extends StatelessWidget {
       required this.profileImage,
       required this.icon,
       this.homeWorkStatus = false,
-      required this.container_color});
+      required this.containerColor});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,7 @@ class SubjectContainer extends StatelessWidget {
         Container(
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(AppSizes.radiusMD),
-              color: container_color),
+              color: containerColor),
           width: double.infinity,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -44,7 +45,7 @@ class SubjectContainer extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   spacing: AppSizes.spacingMD,
                   children: [
-                    // C A L C U L A T O R    C O N T A I N E R
+                    // I C O N    C O N T A I N E R
                     IconContainer(
                       icon: icon,
                       color: true,
@@ -67,7 +68,7 @@ class SubjectContainer extends StatelessWidget {
                             spacing: AppSizes.paddingSM,
                             children: [
                               Text(
-                                'Homework',
+                                AppStrings.homework,
                               ),
                               Icon(homeWorkStatus
                                   ? Icons.check_circle_rounded

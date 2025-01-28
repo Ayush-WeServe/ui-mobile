@@ -17,7 +17,7 @@ class NotificationsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Notifications',
+          AppStrings.notifications,
           style: AppStyles.bodyLarge,
         ),
         leading: Padding(
@@ -43,70 +43,70 @@ class NotificationsScreen extends StatelessWidget {
             spacing: AppSizes.paddingXS,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Today'),
+              Text(AppStrings.today),
               SizedBox(
                 height: AppSizes.spacingSM,
               ),
               NotificationWidget(
                 icon: Icons.calculate,
                 subject: AppStrings.basicMath,
-                message: 'You got A+ today.',
+                message: AppStrings.gotA,
                 backColor: AppColors.lightBlueBackground,
               ),
               NotificationWidget(
                 icon: Icons.book_sharp,
                 subject: AppStrings.englishGramer,
-                message: 'You have unfinished homework',
+                message: AppStrings.unfinished,
                 backColor: AppColors.lightGreen,
               ),
               NotificationWidget(
                 icon: Icons.wordpress_outlined,
                 subject: AppStrings.wordHistory,
-                message: 'Congrats! You got A+ today.',
+                message: AppStrings.congrats,
                 backColor: AppColors.lightPink,
               ),
               SizedBox(
                 height: AppSizes.spacingSM,
               ),
-              Text('Yesterday'),
+              Text(AppStrings.yesterday),
               SizedBox(
                 height: AppSizes.spacingSM,
               ),
               NotificationWidget(
                 icon: Icons.science_outlined,
                 subject: AppStrings.science,
-                message: 'You got D+ today.',
+                message: AppStrings.gotD,
                 backColor: AppColors.lightYellow,
               ),
               NotificationWidget(
                 icon: Icons.wordpress_outlined,
                 subject: AppStrings.wordHistory,
-                message: 'You have unfinished homework',
+                message: AppStrings.unfinished,
                 backColor: AppColors.lightGreen,
               ),
               NotificationWidget(
                 icon: Icons.calculate_outlined,
                 subject: AppStrings.basicMath,
-                message: 'You got A+ today.',
+                message: AppStrings.gotA,
                 backColor: AppColors.lightPink,
               ),
               SizedBox(
                 height: AppSizes.spacingSM,
               ),
-              Text('25-01-2025'),
+              Text(AppStrings.date),
               SizedBox(
                 height: AppSizes.spacingSM,
               ),
               NotificationWidget(
                 icon: Icons.calculate,
                 subject: AppStrings.basicMath,
-                message: 'You got B+ today.',
+                message: AppStrings.gotB,
                 backColor: AppColors.lightBlueBackground,
               ),
               NotificationWidget(
                 icon: Icons.book_sharp,
                 subject: AppStrings.englishGramer,
-                message: 'You have unfinished homework',
+                message: AppStrings.unfinished,
                 backColor: AppColors.lightGreen,
               ),
             ],

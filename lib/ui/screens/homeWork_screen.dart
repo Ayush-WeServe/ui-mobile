@@ -25,23 +25,23 @@ class HomeworkScreen extends StatelessWidget {
               HomeworkContainer(
                 subject: AppStrings.basicMath,
                 icon: Icons.calculate_outlined,
-                time: '45 min',
+                time: AppStrings.hwtime1,
                 color: AppColors.lightBlueBackground,
               ),
               HomeworkContainer(
                   subject: AppStrings.englishGramer,
                   icon: Icons.book_online,
-                  time: '60 min',
+                  time: AppStrings.hwtime2,
                   color: AppColors.lightGreen),
               HomeworkContainer(
                   subject: AppStrings.science,
                   icon: Icons.science_outlined,
-                  time: '40 min',
+                  time: AppStrings.hwtime3,
                   color: AppColors.lightYellow),
               HomeworkContainer(
                   subject: AppStrings.wordHistory,
                   icon: Icons.wordpress_outlined,
-                  time: '20 min',
+                  time: AppStrings.hwtime4,
                   color: AppColors.lightPink),
             ],
           ),

@@ -6,6 +6,7 @@ import 'package:ui_mobile/utils/constants/colors.dart';
 import 'package:ui_mobile/utils/constants/images.dart';
 import 'package:ui_mobile/utils/constants/routes.dart';
 import 'package:ui_mobile/utils/constants/sizes.dart';
+import 'package:ui_mobile/utils/constants/strings.dart';
 import 'package:ui_mobile/utils/constants/styles.dart';
 
 class LectureScreen extends StatelessWidget {
@@ -70,7 +71,7 @@ class LectureScreen extends StatelessWidget {
                                   style: AppStyles.titleLarge,
                                 ),
                                 Text(
-                                  '00:22:25',
+                                  AppStrings.lectureDuration,
                                   style: AppStyles.bodySmall,
                                 ),
                               ],

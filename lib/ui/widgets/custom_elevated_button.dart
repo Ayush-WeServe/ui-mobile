@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../../utils/constants/colors.dart';
 import '../../utils/constants/sizes.dart';
 
@@ -21,20 +20,23 @@ class CustomElevatedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
         height: AppSizes.buttonSM,
-        width: AppSizes.imageLG,
+        width: AppSizes.imageXL,
         child: ElevatedButton(
             style: ElevatedButton.styleFrom(backgroundColor: AppColors.dark),
             onPressed: () {
               Get.toNamed(route, arguments: arg);
             },
             child: Row(
-              spacing: AppSizes.spacingXS,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Visibility(
                   visible: icon != null,
-                  child: Icon(
-                    icon,
-                    color: AppColors.lightScaffold,
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: AppSizes.spacingSM),
+                    child: Icon(
+                      icon,
+                      color: AppColors.lightScaffold,
+                    ),
                   ),
                 ),
                 Text(

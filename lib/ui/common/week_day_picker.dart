@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ui_mobile/controllers/week_controller.dart';
 import 'package:ui_mobile/ui/widgets/box_heading_container.dart';
-// import 'package:ui_mobile/ui/widgets/box_heading_container.dart';
-// import 'package:ui_mobile/ui/widgets/days_list_widget.dart';
+import 'package:ui_mobile/utils/constants/strings.dart';
 import 'package:weekly_date_picker/weekly_date_picker.dart';
-
 import '../../utils/constants/colors.dart';
 import '../../utils/constants/sizes.dart';
 
@@ -27,7 +25,7 @@ class WeekDaysContainer extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              BoxHeadingContainer(topic: 'This Week'),
+              BoxHeadingContainer(topic: AppStrings.thisWeek),
               WeeklyDatePicker(
                 backgroundColor: AppColors.inputFieldColor,
                 weekdayText: controller.selectedDay.toString(),

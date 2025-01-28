@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:image_stack/image_stack.dart';
 import 'package:ui_mobile/ui/widgets/custom_elevated_button.dart';
 import 'package:ui_mobile/utils/constants/images.dart';
+import 'package:ui_mobile/utils/constants/strings.dart';
 
 import '../../utils/constants/colors.dart';
 import '../../utils/constants/routes.dart';
@@ -32,7 +33,7 @@ class SubjectsDetailScreen extends StatelessWidget {
                 subject[0],
                 style: AppStyles.bodyMedium,
               ),
-              Text('will start in 1:20 min', style: AppStyles.labelMedium)
+              Text(AppStrings.willStart, style: AppStyles.labelMedium)
             ],
           ),
           leading: Padding(
@@ -56,7 +57,7 @@ class SubjectsDetailScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Students',
+                  AppStrings.student,
                   style: AppStyles.bodyLarge,
                 ),
                 ImageStack(
@@ -67,13 +68,12 @@ class SubjectsDetailScreen extends StatelessWidget {
                   imageBorderWidth: 1,
                 ),
                 Text(
-                  'Lesson theme',
+                  AppStrings.lessonTheme,
                   style: AppStyles.bodyLarge,
                 ),
+                Text(AppStrings.review),
                 Text(
-                    'Review and extend your of the present simple, present perfect and present continuous tenses.'),
-                Text(
-                  'Additional Materials',
+                  AppStrings.additionalMaterial,
                   style: AppStyles.bodyLarge,
                 ),
                 Row(
@@ -96,7 +96,7 @@ class SubjectsDetailScreen extends StatelessWidget {
                   ],
                 ),
                 Text(
-                  'Homework',
+                  AppStrings.homework,
                   style: AppStyles.bodyLarge,
                 ),
                 Container(
@@ -112,7 +112,7 @@ class SubjectsDetailScreen extends StatelessWidget {
                       spacing: AppSizes.paddingSM,
                       children: [
                         Text(
-                          'Attached',
+                          AppStrings.attached,
                           style: AppStyles.labelLarge,
                         ),
                         Icon(Icons.check_circle_rounded)
@@ -122,7 +122,7 @@ class SubjectsDetailScreen extends StatelessWidget {
                 ),
                 Center(
                     child: CustomElevatedButton(
-                  text: 'Join Class',
+                  text: AppStrings.joinClass,
                   route: AppRouteNames.lectureScreen,
                   arg: subject,
                 ))
