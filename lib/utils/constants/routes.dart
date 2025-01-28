@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:ui_mobile/bindings/homework_status_binding.dart';
 import 'package:ui_mobile/bindings/tab_binding.dart';
 import 'package:ui_mobile/bindings/week_binding.dart';
 import 'package:ui_mobile/ui/common/tab_bar_widget.dart';
@@ -10,6 +11,7 @@ import 'package:ui_mobile/ui/screens/notifications_screen.dart';
 import 'package:ui_mobile/ui/screens/schedule_screen.dart';
 import 'package:ui_mobile/ui/screens/subjects_screen.dart';
 import 'package:ui_mobile/ui/common/navbar_widget.dart';
+import 'package:ui_mobile/ui/screens/tutorial_screen.dart';
 
 import '../../ui/screens/home_screen.dart';
 import '../../ui/screens/splash_screen.dart';
@@ -42,7 +44,7 @@ class AppRoutes {
     GetPage(
         name: AppRouteNames.nav,
         page: () => NavBarWidget(),
-        binding: NavBinding()),
+        bindings: [NavBinding(), HomeworkStatusBinding()]),
     GetPage(
       name: AppRouteNames.notification,
       page: () => NotificationsScreen(),
@@ -67,6 +69,10 @@ class AppRoutes {
       name: AppRouteNames.libraryScreen,
       page: () => LibraryScreen(),
     ),
+    GetPage(
+      name: AppRouteNames.tutorialScreen,
+      page: () => TutorialScreen(),
+    ),
   ];
 }
 
@@ -84,4 +90,5 @@ class AppRouteNames {
   static const String tabBar = '/TabBar-Widget';
   static const String homeworkScreen = '/homework-Screen';
   static const String libraryScreen = '/library-Screen';
+  static const String tutorialScreen = '/tutorial-Screen';
 }

@@ -29,6 +29,8 @@ class AppSizes {
   static const double spacingLG = 32;
   static const double spacingXL = 48;
 
+  static const double buttonS = 24;
+  static const double buttonXS = 36;
   static const double buttonSM = 48;
   static const double buttonMD = 64;
   static const double buttonLG = 80;
@@ -44,6 +46,7 @@ class AppSizes {
   static const double imageMD = 128;
   static const double imageLG = 160;
   static const double imageXL = 192;
+  static const double imageXXL = 210;
 
   static const double radiusXS = 4;
   static const double radiusSM = 8;

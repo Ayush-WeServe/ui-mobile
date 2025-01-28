@@ -20,6 +20,7 @@ dependencies:
   dotted_line: ^3.2.3
   weekly_date_picker: ^1.4.2
   image_stack: ^2.1.1
+  carousel_slider: ^5.0.0
   
 dev_dependencies:
   flutter_test:

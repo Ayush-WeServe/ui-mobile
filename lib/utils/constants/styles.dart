@@ -79,4 +79,16 @@ class AppStyles {
     fontWeight: FontWeight.w500,
     fontSize: AppSizes.fontsLabelMedium,
   );
+
+  static final TextStyle? tutorialTopic = TextStyle(
+      color: AppColors.lightScaffold,
+      fontWeight: FontWeight.w500,
+      fontSize: AppSizes.fontsBodyMedium,
+      overflow: TextOverflow.ellipsis);
+
+  static final TextStyle? tutorialTime = TextStyle(
+      color: AppColors.lightScaffold,
+      fontWeight: FontWeight.w400,
+      fontSize: AppSizes.fontsLabelSmall,
+      overflow: TextOverflow.ellipsis);
 }
