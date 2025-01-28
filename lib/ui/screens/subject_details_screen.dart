@@ -8,7 +8,7 @@ import '../../utils/constants/colors.dart';
 import '../../utils/constants/routes.dart';
 import '../../utils/constants/sizes.dart';
 import '../../utils/constants/styles.dart';
-import '../widgets/icon_container.dart';
+import '../widgets/icon_button_container.dart';
 
 class SubjectsDetailScreen extends StatelessWidget {
   const SubjectsDetailScreen({super.key});

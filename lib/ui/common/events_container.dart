@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ui_mobile/ui/widgets/icon_container.dart';
+import 'package:ui_mobile/ui/widgets/icon_button_container.dart';
 import 'package:ui_mobile/utils/constants/sizes.dart';
 import 'package:ui_mobile/utils/constants/styles.dart';
 

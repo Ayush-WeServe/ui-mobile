@@ -22,9 +22,11 @@ class IconContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+        width: AppSizes.iconMD,
+        height: AppSizes.iconMD,
         decoration: BoxDecoration(
             color: color ? backcolor : AppColors.lightScaffold,
-            borderRadius: BorderRadius.circular(AppSizes.radiusMD),
+            borderRadius: BorderRadius.circular(AppSizes.radiusSM),
             border: border
                 ? Border.all(
                     width: 0.5,

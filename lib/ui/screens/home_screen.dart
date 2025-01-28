@@ -35,6 +35,8 @@ class HomeScreen extends StatelessWidget {
                 professor: AppStrings.jane,
                 profileImage: AppImages.jane,
                 icon: Icons.calculate,
+                homeWorkStatus: true,
+                container_color: AppColors.lightBlueBackground,
               ),
 
               // E V E N T S

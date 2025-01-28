@@ -10,6 +10,8 @@ class SubjectContainer extends StatelessWidget {
   final String dateTime;
   final String professor;
   final String profileImage;
+  final bool homeWorkStatus;
+  final Color container_color;
 
   const SubjectContainer(
       {super.key,
@@ -17,7 +19,9 @@ class SubjectContainer extends StatelessWidget {
       required this.dateTime,
       required this.professor,
       required this.profileImage,
-      required this.icon});
+      required this.icon,
+      this.homeWorkStatus = false,
+      required this.container_color});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +32,7 @@ class SubjectContainer extends StatelessWidget {
         Container(
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(AppSizes.radiusMD),
-              color: AppColors.lightBlue),
+              color: container_color),
           width: double.infinity,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -65,7 +69,9 @@ class SubjectContainer extends StatelessWidget {
                               Text(
                                 'Homework',
                               ),
-                              Icon(Icons.check_circle_rounded)
+                              Icon(homeWorkStatus
+                                  ? Icons.check_circle_rounded
+                                  : Icons.remove_circle_rounded)
                             ],
                           ),
                         ),
@@ -99,7 +105,7 @@ class SubjectContainer extends StatelessWidget {
                     spacing: AppSizes.spacingXS,
                     children: [
                       ClipRRect(
-                        borderRadius: BorderRadius.circular(AppSizes.radiusSM),
+                        borderRadius: BorderRadius.circular(AppSizes.radiusMD),
                         child: Image.asset(
                           profileImage,
                           height: AppSizes.imageXS,
