@@ -16,6 +16,10 @@ class AppStrings {
   static const String englishGramer = "English Gramer";
   static const String science = "Science";
   static const String wordHistory = "Word History";
+  static const String all = "All";
+
+  static const String doFirst = "Do first";
+  static const String doLast = "Do last";
 
   static const String jane = "jane cooper";
   static const String kathrynMurphy = "Kathryn Murphy";
@@ -53,10 +57,12 @@ class AppStrings {
       "Review and extend your of the present simple, present perfect and present continuous tenses.";
   static const String additionalMaterial = "Additional Materials";
   static const String attached = "Attached";
+  static const String doneTask = "Done 1/3'";
 
   // B U T T O N   T E X T
   static const String joinClass = "Join Class";
   static const String lessonTutorial = "Lesson Tutorial";
+  static const String chat = "Chat";
 
   //  M E S S A G E S
   static const String gotA = "You got A+ today.";
@@ -66,16 +72,20 @@ class AppStrings {
   static const String gotB = "You got B+ today.";
 
   static const String willStart = "will start in 1:20 min";
+  static const String sortBy = "Sort by :";
 
   static const String date = "25-01-2025";
+  static const String lectureDuration = "00:22:25";
+  static const String date1 = 'Tuesday 6';
+  static const String taskList = '4 Tasks';
+  static const String intro = 'Intro';
+  static const String duration = '30 min';
 
   static const String time1 = "Today, 1:15pm";
   static const String time2 = "Today 8:15am";
   static const String time3 = "Today, 10:00am";
   static const String time4 = "Today, 12:00am";
   static const String time5 = "Today, 2:15am";
-
-  static const String lectureDuration = "00:22:25";
 
   static const String hwtime1 = "40 min";
   static const String hwtime2 = "60 min";
@@ -93,4 +103,9 @@ class AppStrings {
   static const String lectrureTime2 = "10:00am - 11:10am";
   static const String lectrureTime3 = "12:00am - 12:45am";
   static const String lectrureTime4 = "01:00am - 1:50am";
+
+  static const String tasks = "Tasks";
+  static const String task1 = "Task 1";
+  static const String task2 = "Task 2";
+  static const String task3 = "Task 3";
 }

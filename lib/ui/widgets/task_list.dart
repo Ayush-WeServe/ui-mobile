@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ui_mobile/ui/widgets/custom_elevated_button.dart';
 import 'package:ui_mobile/utils/constants/routes.dart';
 import 'package:ui_mobile/utils/constants/sizes.dart';
+import 'package:ui_mobile/utils/constants/strings.dart';
 import 'package:ui_mobile/utils/constants/styles.dart';
 
 import 'task_container.dart';
@@ -21,11 +22,11 @@ class TaskList extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Tasks',
+                AppStrings.tasks,
                 style: AppStyles.bodyLarge,
               ),
               Text(
-                'Done 1/3',
+                AppStrings.doneTask,
                 style: AppStyles.bodySmall,
               )
             ],
@@ -34,24 +35,24 @@ class TaskList extends StatelessWidget {
             spacing: AppSizes.spacingXS,
             children: [
               TaskContainer(
-                task: 'Task 1',
-                time: '30 min',
-                status: 'Uploaded',
+                task: AppStrings.task1,
+                time: AppStrings.hwtime1,
+                status: AppStrings.uploaded,
               ),
               TaskContainer(
-                task: 'Task 2',
-                time: '60 min',
-                status: 'To Do',
+                task: AppStrings.task2,
+                time: AppStrings.hwtime2,
+                status: AppStrings.todo,
               ),
               TaskContainer(
-                task: 'Task 3',
-                time: '40 min',
-                status: 'To Do',
+                task: AppStrings.task3,
+                time: AppStrings.hwtime3,
+                status: AppStrings.todo,
               ),
             ],
           ),
           CustomElevatedButton(
-            text: 'Chat',
+            text: AppStrings.chat,
             route: AppRouteNames.nav,
             icon: Icons.chat_outlined,
           )

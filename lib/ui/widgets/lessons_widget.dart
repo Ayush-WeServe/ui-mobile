@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:ui_mobile/utils/constants/colors.dart';
 import 'package:ui_mobile/utils/constants/images.dart';
 import 'package:ui_mobile/utils/constants/sizes.dart';
+import 'package:ui_mobile/utils/constants/strings.dart';
 import 'package:ui_mobile/utils/constants/styles.dart';
 
 class LessonsWidget extends StatelessWidget {
@@ -59,11 +60,11 @@ class LessonsWidget extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'Intro',
+                          AppStrings.intro,
                           style: AppStyles.tutorialTopic,
                         ),
                         Text(
-                          '30 min',
+                          AppStrings.duration,
                           style: AppStyles.tutorialTime,
                         ),
                       ],

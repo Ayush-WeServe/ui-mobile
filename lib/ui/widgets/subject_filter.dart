@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_mobile/utils/constants/sizes.dart';
+import 'package:ui_mobile/utils/constants/strings.dart';
 import 'package:ui_mobile/utils/constants/styles.dart';
 
 class SubjectFilter extends StatelessWidget {
@@ -8,12 +9,15 @@ class SubjectFilter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<String> subjects = <String>[
-      'All',
-      'Maths',
-      'English',
-      'Science'
+      AppStrings.all,
+      AppStrings.basicMath,
+      AppStrings.englishGramer,
+      AppStrings.wordHistory
     ];
-    final List<String> sortingList = <String>['Do first', 'Do last'];
+    final List<String> sortingList = <String>[
+      AppStrings.doFirst,
+      AppStrings.doLast
+    ];
     String subject = subjects.first;
     String sorting = sortingList.first;
 
@@ -23,7 +27,7 @@ class SubjectFilter extends StatelessWidget {
         spacing: AppSizes.spacingXS,
         children: [
           Text(
-            'Subjects :',
+            '${AppStrings.subjects}:',
             style: AppStyles.labelSmall,
           ),
           Expanded(
@@ -39,7 +43,7 @@ class SubjectFilter extends StatelessWidget {
             ),
           ),
           Text(
-            'Sort by :',
+            AppStrings.sortBy,
             style: AppStyles.labelSmall,
           ),
           Expanded(
