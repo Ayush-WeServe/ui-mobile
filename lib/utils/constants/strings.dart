@@ -108,4 +108,7 @@ class AppStrings {
   static const String task1 = "Task 1";
   static const String task2 = "Task 2";
   static const String task3 = "Task 3";
+
+  static const String uploaded = "Uploaded";
+  static const String todo = "To Do";
 }

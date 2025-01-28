@@ -71,13 +71,13 @@ class AppStyles {
       overflow: TextOverflow.ellipsis);
 
   static final TextStyle? heading = TextStyle(
-    fontWeight: FontWeight.w700,
-    fontSize: AppSizes.fontsHeadlineSmall,
+    fontWeight: FontWeight.w800,
+    fontSize: AppSizes.fontsHeadlineMedium,
   );
 
   static final TextStyle? smallHeading = TextStyle(
     fontWeight: FontWeight.w500,
-    fontSize: AppSizes.fontsLabelMedium,
+    fontSize: AppSizes.fontsLabelLarge,
   );
 
   static final TextStyle? tutorialTopic = TextStyle(
