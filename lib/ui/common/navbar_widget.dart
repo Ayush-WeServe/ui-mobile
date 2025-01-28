@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ui_mobile/ui/common/tab_bar_widget.dart';
 import 'package:ui_mobile/ui/screens/chat_screen.dart';
 import 'package:ui_mobile/ui/screens/home_screen.dart';
 import 'package:ui_mobile/ui/screens/schedule_screen.dart';
-import 'package:ui_mobile/ui/screens/subjects_screen.dart';
-import '../../controllers/tab_controller.dart';
+import '../../controllers/nav_controller.dart';
 
-class TabBarWidget extends StatelessWidget {
-  final TabBarController controller = Get.put(TabBarController());
+class NavBarWidget extends StatelessWidget {
+  final NavBarController controller = Get.put(NavBarController());
 
   final List<Widget> pages = [
     HomeScreen(),
     ScheduleScreen(),
-    SubjectsScreen(),
+    TabBarWidget(),
     ChatScreen(),
   ];
 

@@ -43,7 +43,7 @@ class HomeScreenHeading extends StatelessWidget {
             ),
           ],
         ),
-        IconContainer(
+        IconButtonContainer(
             icon: Icons.notifications_active,
             onTap: () {
               Get.toNamed(AppRouteNames.notification);

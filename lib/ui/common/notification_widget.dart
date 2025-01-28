@@ -35,7 +35,7 @@ class NotificationWidget extends StatelessWidget {
               children: [
                 Expanded(
                     flex: 1,
-                    child: IconContainer(
+                    child: IconButtonContainer(
                       icon: icon,
                       onTap: () {},
                       border: false,
@@ -79,7 +79,7 @@ class NotificationWidget extends StatelessWidget {
                       spacing: AppSizes.spacingLG,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        IconContainer(icon: icon, onTap: () {}),
+                        IconButtonContainer(icon: icon, onTap: () {}),
                         Text(
                           message,
                           style: AppStyles.bodyLarge,

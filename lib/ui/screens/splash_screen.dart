@@ -34,7 +34,7 @@ class SplashScreen extends StatelessWidget {
               ),
             ),
             CustomElevatedButton(
-                text: AppStrings.letsStart, route: AppRouteNames.tab),
+                text: AppStrings.letsStart, route: AppRouteNames.nav),
           ],
         ),
       ),

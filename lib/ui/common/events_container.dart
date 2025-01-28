@@ -52,7 +52,8 @@ class EventsContainer extends StatelessWidget {
                       )
                     ],
                   ),
-                  IconContainer(icon: Icons.heart_broken_outlined, onTap: () {})
+                  IconButtonContainer(
+                      icon: Icons.heart_broken_outlined, onTap: () {})
                 ],
               ),
             ),

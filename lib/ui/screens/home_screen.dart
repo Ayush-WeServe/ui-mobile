@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ui_mobile/ui/common/next_class_container.dart';
+import 'package:ui_mobile/ui/common/subject_container.dart';
 import 'package:ui_mobile/ui/common/searchBar_widget.dart';
 import 'package:ui_mobile/ui/widgets/box_heading_container.dart';
 import 'package:ui_mobile/ui/widgets/home_screen_heading.dart';
@@ -29,11 +29,12 @@ class HomeScreen extends StatelessWidget {
 
               // C L A S S   C O N T A I N E R
               BoxHeadingContainer(topic: AppStrings.nextClassLabel),
-              NextClassContainer(
+              SubjectContainer(
                 subject: AppStrings.basicMath,
                 dateTime: AppStrings.lectureTime,
                 professor: AppStrings.jane,
                 profileImage: AppImages.jane,
+                icon: Icons.calculate,
               ),
 
               // E V E N T S

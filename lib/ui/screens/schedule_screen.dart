@@ -25,7 +25,7 @@ class ScheduleScreen extends StatelessWidget {
                     'Schedule',
                     style: AppStyles.headlineMedium,
                   ),
-                  IconContainer(icon: Icons.search_outlined, onTap: () {})
+                  IconButtonContainer(icon: Icons.search_outlined, onTap: () {})
                 ],
               ),
               WeekDaysContainer(),

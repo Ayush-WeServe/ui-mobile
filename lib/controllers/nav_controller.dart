@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-class TabBarController extends GetxController {
+class NavBarController extends GetxController {
   var selectedIndex = 0.obs;
 
   void onItemTapped(int index) {

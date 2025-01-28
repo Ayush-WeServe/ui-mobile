@@ -55,10 +55,10 @@ class LectureScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           spacing: AppSizes.spacingMD,
                           children: [
-                            IconContainer(
+                            IconButtonContainer(
                                 icon: Icons.keyboard_arrow_left_outlined,
                                 onTap: () {
-                                  Get.toNamed(AppRouteNames.tab);
+                                  Get.toNamed(AppRouteNames.nav);
                                 }),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.end,
@@ -101,19 +101,19 @@ class LectureScreen extends StatelessWidget {
                             Column(
                               spacing: AppSizes.spacingSM,
                               children: [
-                                IconContainer(
+                                IconButtonContainer(
                                     icon: Icons.mic_outlined,
                                     onTap: () {},
                                     color: true,
                                     backcolor: Colors.transparent,
                                     iconColor: AppColors.lightScaffold),
-                                IconContainer(
+                                IconButtonContainer(
                                     icon: Icons.videocam_outlined,
                                     onTap: () {},
                                     color: true,
                                     backcolor: Colors.transparent,
                                     iconColor: AppColors.lightScaffold),
-                                IconContainer(
+                                IconButtonContainer(
                                   icon: Icons.front_hand,
                                   onTap: () {},
                                   color: true,
@@ -132,7 +132,7 @@ class LectureScreen extends StatelessWidget {
               Row(
                 spacing: AppSizes.spacingXS,
                 children: [
-                  IconContainer(icon: Icons.add_outlined, onTap: () {}),
+                  IconButtonContainer(icon: Icons.add_outlined, onTap: () {}),
                   ImageStack(
                     imageList: images,
                     totalCount: images.length,
@@ -175,7 +175,7 @@ class LectureScreen extends StatelessWidget {
                         Row(
                           spacing: AppSizes.spacingXS,
                           children: [
-                            IconContainer(
+                            IconButtonContainer(
                               icon: Icons.attach_file_outlined,
                               onTap: () {},
                               border: false,

@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: AppThemes.lightTheme,
       getPages: AppRoutes.routes,
       initialRoute: AppRouteNames.splash,
-      initialBinding: TabBinding(),
+      initialBinding: NavBinding(),
     );
   }
 }

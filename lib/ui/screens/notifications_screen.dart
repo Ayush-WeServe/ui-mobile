@@ -22,10 +22,10 @@ class NotificationsScreen extends StatelessWidget {
         ),
         leading: Padding(
           padding: const EdgeInsets.all(AppSizes.paddingXS),
-          child: IconContainer(
+          child: IconButtonContainer(
             icon: Icons.keyboard_arrow_left,
             onTap: () {
-              Get.toNamed(AppRouteNames.tab);
+              Get.toNamed(AppRouteNames.nav);
             },
             border: true,
           ),

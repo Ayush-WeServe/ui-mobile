@@ -15,7 +15,6 @@ class BoxHeadingContainer extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: AppSizes.paddingMD),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.start,
         spacing: AppSizes.spacingMD,
 
         // H E A D I N G

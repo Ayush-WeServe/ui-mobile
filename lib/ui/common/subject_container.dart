@@ -4,18 +4,20 @@ import 'package:ui_mobile/utils/constants/colors.dart';
 import 'package:ui_mobile/utils/constants/sizes.dart';
 import 'package:ui_mobile/utils/constants/styles.dart';
 
-class NextClassContainer extends StatelessWidget {
+class SubjectContainer extends StatelessWidget {
+  final IconData icon;
   final String subject;
   final String dateTime;
   final String professor;
   final String profileImage;
 
-  const NextClassContainer(
+  const SubjectContainer(
       {super.key,
       required this.subject,
       required this.dateTime,
       required this.professor,
-      required this.profileImage});
+      required this.profileImage,
+      required this.icon});
 
   @override
   Widget build(BuildContext context) {
@@ -40,10 +42,9 @@ class NextClassContainer extends StatelessWidget {
                   children: [
                     // C A L C U L A T O R    C O N T A I N E R
                     IconContainer(
-                      icon: Icons.calculate,
-                      onTap: () {},
+                      icon: icon,
                       color: true,
-                      backcolor: AppColors.lightBlueBackground,
+                      backcolor: AppColors.lightScaffold,
                     ),
 
                     //  H O M E W O R K    T  I K

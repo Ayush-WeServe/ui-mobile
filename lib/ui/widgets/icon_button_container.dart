@@ -3,18 +3,19 @@ import 'package:ui_mobile/utils/constants/sizes.dart';
 
 import '../../utils/constants/colors.dart';
 
-class IconContainer extends StatelessWidget {
+class IconButtonContainer extends StatelessWidget {
   final bool color;
   final IconData icon;
-
+  final onTap;
   final Color? backcolor;
   final bool border;
   final Color? iconColor;
 
-  const IconContainer(
+  const IconButtonContainer(
       {super.key,
       this.color = false,
       required this.icon,
+      required this.onTap,
       this.backcolor,
       this.border = true,
       this.iconColor});
@@ -31,9 +32,11 @@ class IconContainer extends StatelessWidget {
                     color: AppColors.dark,
                   )
                 : null),
-        child: Icon(
-          icon,
-          color: iconColor,
-        ));
+        child: IconButton(
+            onPressed: onTap,
+            icon: Icon(
+              icon,
+              color: iconColor,
+            )));
   }
 }
