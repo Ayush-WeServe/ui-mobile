@@ -15,7 +15,7 @@ class SplashScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(AppSizes.paddingMD),
+          padding: const EdgeInsets.symmetric(vertical: AppSizes.paddingSM),
           child: Column(
             spacing: AppSizes.paddingMD,
             children: [

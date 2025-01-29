@@ -35,44 +35,45 @@ class LibraryScreen extends StatelessWidget {
           body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: AppSizes.paddingXS),
-          child: GridView.builder(
-              shrinkWrap: true,
-              itemCount: controller.books.length,
-              gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                maxCrossAxisExtent: 200,
-                mainAxisExtent: 270,
-              ),
-              // gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              //     crossAxisCount: (orientation == Orientation.portrait) ? 2 : 3),
-              itemBuilder: (BuildContext context, int index) {
-                final book = controller.books[index];
-                return Padding(
-                  padding: const EdgeInsets.symmetric(
-                      vertical: AppSizes.paddingXS,
-                      horizontal: AppSizes.paddingXS),
-                  child: Container(
+          child: Padding(
+            padding: EdgeInsets.all(AppSizes.paddingMD),
+            child: GridView.builder(
+                shrinkWrap: true,
+                itemCount: controller.books.length,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  childAspectRatio: 2 / 3,
+                  crossAxisSpacing: AppSizes.paddingXS,
+                  mainAxisSpacing: AppSizes.paddingXS,
+                  mainAxisExtent: 300,
+                ),
+                // gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                //     crossAxisCount: (orientation == Orientation.portrait) ? 2 : 3),
+                itemBuilder: (BuildContext context, int index) {
+                  final book = controller.books[index];
+                  return Container(
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(AppSizes.radiusLG),
                         color: color[index % color.length]),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Expanded(
-                          flex: 2,
-                          child: Image.network(
-                            book.image!,
-                            height: AppSizes.imageXXL,
-                            width: AppSizes.imageXXL,
-                          ),
+                        Image.network(
+                          book.image!,
+                          height: AppSizes.imageXXL,
+                          width: AppSizes.imageXXL,
+                          fit: BoxFit.cover,
                         ),
                         SizedBox(
                           width: double.infinity,
                           child: Padding(
-                            padding: const EdgeInsets.all(AppSizes.paddingXS),
+                            padding: const EdgeInsets.symmetric(horizontal: 16),
                             child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              spacing: AppSizes.spacingXS,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              spacing: AppSizes.paddingXS,
                               children: [
                                 TextsWidget(
+                                    maxLine: 2,
                                     text: book.title ?? 'No Title',
                                     style: AppStyles.imgTitle),
                                 TextsWidget(
@@ -85,9 +86,9 @@ class LibraryScreen extends StatelessWidget {
                         )
                       ],
                     ),
-                  ),
-                );
-              }),
+                  );
+                }),
+          ),
           // child: ListView.builder(
           //     // scrollDirection: Axis.horizontal,
           //     padding: EdgeInsets.symmetric(horizontal: AppSizes.paddingMD),

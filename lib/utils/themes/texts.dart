@@ -14,7 +14,7 @@ class TextsWidget extends StatelessWidget {
       this.style,
       this.maxLine,
       this.softwrap,
-      this.overflow,
+      this.overflow = TextOverflow.ellipsis,
       this.textAlignCenter});
 
   @override

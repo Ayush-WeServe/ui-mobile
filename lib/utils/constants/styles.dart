@@ -93,12 +93,12 @@ class AppStyles {
       overflow: TextOverflow.ellipsis);
 
   static final TextStyle? imgTitle = TextStyle(
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeight.normal,
     fontSize: 12,
   );
 
   static final TextStyle? imgPrice = TextStyle(
-      fontWeight: FontWeight.w600,
-      fontSize: 16,
+      fontWeight: FontWeight.w700,
+      fontSize: 18,
       overflow: TextOverflow.ellipsis);
 }
