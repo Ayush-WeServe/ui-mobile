@@ -19,22 +19,16 @@ class BoxHeadingContainer extends StatelessWidget {
 
         // H E A D I N G
         children: [
-          Align(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              topic,
-              style: AppStyles.titleMedium,
-            ),
+          Text(
+            topic,
+            style: AppStyles.titleMedium,
           ),
-          Align(
-            alignment: Alignment.centerRight,
-            child: TextButton(
-                onPressed: () {},
-                child: Text(
-                  AppStrings.seeAllButton,
-                  style: AppStyles.textButtonLG,
-                )),
-          )
+          TextButton(
+              onPressed: () {},
+              child: Text(
+                AppStrings.seeAllButton,
+                style: AppStyles.textButtonLG,
+              ))
         ],
       ),
     );
