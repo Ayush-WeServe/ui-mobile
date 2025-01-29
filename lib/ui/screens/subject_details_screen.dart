@@ -4,6 +4,7 @@ import 'package:image_stack/image_stack.dart';
 import 'package:ui_mobile/ui/widgets/custom_elevated_button.dart';
 import 'package:ui_mobile/utils/constants/images.dart';
 import 'package:ui_mobile/utils/constants/strings.dart';
+import 'package:ui_mobile/utils/themes/texts.dart';
 
 import '../../utils/constants/colors.dart';
 import '../../utils/constants/routes.dart';
@@ -29,11 +30,14 @@ class SubjectsDetailScreen extends StatelessWidget {
           title: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                subject[0],
+              TextsWidget(
+                text: subject[0],
                 style: AppStyles.bodyMedium,
               ),
-              Text(AppStrings.willStart, style: AppStyles.labelMedium)
+              TextsWidget(
+                text: AppStrings.willStart,
+                style: AppStyles.labelMedium,
+              ),
             ],
           ),
           leading: Padding(
@@ -56,8 +60,8 @@ class SubjectsDetailScreen extends StatelessWidget {
               spacing: AppSizes.spacingSM,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  AppStrings.student,
+                TextsWidget(
+                  text: AppStrings.student,
                   style: AppStyles.bodyLarge,
                 ),
                 ImageStack(
@@ -67,13 +71,10 @@ class SubjectsDetailScreen extends StatelessWidget {
                   imageCount: 3,
                   imageBorderWidth: 1,
                 ),
-                Text(
-                  AppStrings.lessonTheme,
-                  style: AppStyles.bodyLarge,
-                ),
-                Text(AppStrings.review),
-                Text(
-                  AppStrings.additionalMaterial,
+                TextsWidget(text: AppStrings.lessonTheme),
+                TextsWidget(text: AppStrings.review),
+                TextsWidget(
+                  text: AppStrings.additionalMaterial,
                   style: AppStyles.bodyLarge,
                 ),
                 Row(
@@ -95,8 +96,8 @@ class SubjectsDetailScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                Text(
-                  AppStrings.homework,
+                TextsWidget(
+                  text: AppStrings.homework,
                   style: AppStyles.bodyLarge,
                 ),
                 Container(
@@ -111,8 +112,8 @@ class SubjectsDetailScreen extends StatelessWidget {
                       mainAxisSize: MainAxisSize.min,
                       spacing: AppSizes.paddingSM,
                       children: [
-                        Text(
-                          AppStrings.attached,
+                        TextsWidget(
+                          text: AppStrings.attached,
                           style: AppStyles.labelLarge,
                         ),
                         Icon(Icons.check_circle_rounded)

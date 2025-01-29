@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:ui_mobile/utils/constants/colors.dart';
+import 'package:ui_mobile/utils/themes/texts.dart';
 
 import '../../utils/constants/sizes.dart';
 import '../../utils/constants/styles.dart';
@@ -28,8 +29,8 @@ class TaskContainer extends StatelessWidget {
         child: Row(
           spacing: AppSizes.spacingSM,
           children: [
-            Text(
-              task,
+            TextsWidget(
+              text: task,
               style: AppStyles.bodyLarge,
             ),
             Expanded(
@@ -45,14 +46,14 @@ class TaskContainer extends StatelessWidget {
                         color: AppColors.dark,
                         size: AppSizes.iconXS,
                       ),
-                      Text(
-                        time,
+                      TextsWidget(
+                        text: time,
                         style: AppStyles.labelSmall,
                       )
                     ],
                   ),
-                  Text(
-                    status,
+                  TextsWidget(
+                    text: status,
                     style: AppStyles.labelLarge,
                   )
                 ],

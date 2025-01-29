@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ui_mobile/utils/constants/sizes.dart';
 import 'package:ui_mobile/utils/constants/strings.dart';
 import 'package:ui_mobile/utils/constants/styles.dart';
+import 'package:ui_mobile/utils/themes/texts.dart';
 
 class SubjectFilter extends StatelessWidget {
   const SubjectFilter({super.key});
@@ -26,8 +27,8 @@ class SubjectFilter extends StatelessWidget {
       child: Row(
         spacing: AppSizes.spacingXS,
         children: [
-          Text(
-            '${AppStrings.subjects}:',
+          TextsWidget(
+            text: '${AppStrings.subjects}:',
             style: AppStyles.labelSmall,
           ),
           Expanded(
@@ -42,8 +43,8 @@ class SubjectFilter extends StatelessWidget {
               }).toList(),
             ),
           ),
-          Text(
-            AppStrings.sortBy,
+          TextsWidget(
+            text: AppStrings.sortBy,
             style: AppStyles.labelSmall,
           ),
           Expanded(

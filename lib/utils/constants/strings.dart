@@ -26,6 +26,7 @@ class AppStrings {
   static const String robertFox = "Robert Fox";
   static const String wordHistoryProf = "Harshil Patel";
   static const String professor = "Eleanor Pena";
+  static const String easterHoward = "Easter Howard";
 
   static const String lectureTime = "Today, 08:15 am";
   static const String nextClassLabel = "Next Class";
@@ -43,6 +44,7 @@ class AppStrings {
   static const String search = "Search";
   static const String subjects = "Subjects";
   static const String library = "Library";
+  static const String textMsg = "'Text message..'";
 
   // H E A D I N G   T I T L E S
   static const String lessonMaterial = "Lessons Material";
@@ -70,6 +72,7 @@ class AppStrings {
   static const String congrats = "Congrats! You got A+ today.";
   static const String gotD = "You got D+ today.";
   static const String gotB = "You got B+ today.";
+  static const String terrifying = "Haha that's terrifying";
 
   static const String willStart = "will start in 1:20 min";
   static const String sortBy = "Sort by :";

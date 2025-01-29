@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_mobile/utils/constants/strings.dart';
+import 'package:ui_mobile/utils/themes/texts.dart';
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});
@@ -8,7 +9,7 @@ class ChatScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text(AppStrings.chatScreen),
+        child: TextsWidget(text: AppStrings.chatScreen),
       ),
     );
   }

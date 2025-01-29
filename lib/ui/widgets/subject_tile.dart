@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ui_mobile/utils/constants/routes.dart';
 import 'package:ui_mobile/utils/constants/styles.dart';
+import 'package:ui_mobile/utils/themes/texts.dart';
 import '../../utils/constants/colors.dart';
 import '../../utils/constants/sizes.dart';
 
@@ -27,12 +28,12 @@ class SubjectTile extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                sub[0],
+              TextsWidget(
+                text: sub[0],
                 style: AppStyles.labelLarge,
               ),
-              Text(
-                sub[1],
+              TextsWidget(
+                text: sub[1],
                 style: AppStyles.labelMedium,
               )
             ],

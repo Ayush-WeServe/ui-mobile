@@ -5,6 +5,7 @@ import 'package:ui_mobile/utils/constants/images.dart';
 import 'package:ui_mobile/utils/constants/sizes.dart';
 import 'package:ui_mobile/utils/constants/strings.dart';
 import 'package:ui_mobile/utils/constants/styles.dart';
+import 'package:ui_mobile/utils/themes/texts.dart';
 
 class LessonsWidget extends StatelessWidget {
   const LessonsWidget({super.key});
@@ -59,12 +60,12 @@ class LessonsWidget extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          AppStrings.intro,
+                        TextsWidget(
+                          text: AppStrings.intro,
                           style: AppStyles.tutorialTopic,
                         ),
-                        Text(
-                          AppStrings.duration,
+                        TextsWidget(
+                          text: AppStrings.duration,
                           style: AppStyles.tutorialTime,
                         ),
                       ],

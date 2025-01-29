@@ -6,6 +6,7 @@ import 'package:ui_mobile/utils/constants/colors.dart';
 import 'package:ui_mobile/utils/constants/sizes.dart';
 import 'package:ui_mobile/utils/constants/strings.dart';
 import 'package:ui_mobile/utils/constants/styles.dart';
+import 'package:ui_mobile/utils/themes/texts.dart';
 
 class ScheduleScreen extends StatelessWidget {
   const ScheduleScreen({super.key});
@@ -22,10 +23,9 @@ class ScheduleScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    AppStrings.schedule,
-                    style: AppStyles.headlineMedium,
-                  ),
+                  TextsWidget(
+                      text: AppStrings.schedule,
+                      style: AppStyles.headlineMedium),
                   IconButtonContainer(icon: Icons.search_outlined, onTap: () {})
                 ],
               ),

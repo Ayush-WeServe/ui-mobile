@@ -4,6 +4,7 @@ import 'package:ui_mobile/utils/constants/routes.dart';
 import 'package:ui_mobile/utils/constants/sizes.dart';
 import 'package:ui_mobile/utils/constants/strings.dart';
 import 'package:ui_mobile/utils/constants/styles.dart';
+import 'package:ui_mobile/utils/themes/texts.dart';
 
 import 'task_container.dart';
 
@@ -21,12 +22,12 @@ class TaskList extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                AppStrings.tasks,
+              TextsWidget(
+                text: AppStrings.tasks,
                 style: AppStyles.bodyLarge,
               ),
-              Text(
-                AppStrings.doneTask,
+              TextsWidget(
+                text: AppStrings.doneTask,
                 style: AppStyles.bodySmall,
               )
             ],

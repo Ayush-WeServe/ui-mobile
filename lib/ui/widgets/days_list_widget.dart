@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ui_mobile/utils/constants/colors.dart';
 import 'package:ui_mobile/utils/constants/sizes.dart';
+import 'package:ui_mobile/utils/themes/texts.dart';
 
 import '../../utils/constants/styles.dart';
 
@@ -23,10 +24,7 @@ class DaysListWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         spacing: 7,
         children: [
-          Text(
-            day,
-            style: AppStyles.labelSmall,
-          ),
+          TextsWidget(text: day, style: AppStyles.labelSmall),
           Container(
             decoration: currentDay
                 ? BoxDecoration(
@@ -35,8 +33,8 @@ class DaysListWidget extends StatelessWidget {
                     borderRadius: BorderRadius.circular(AppSizes.radiusSM),
                   )
                 : null,
-            child: Text(
-              date,
+            child: TextsWidget(
+              text: date,
               style: currentDay ? AppStyles.selectedDate : AppStyles.labelLarge,
             ),
           ),

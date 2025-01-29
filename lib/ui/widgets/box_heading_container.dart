@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_mobile/utils/constants/strings.dart';
+import 'package:ui_mobile/utils/themes/texts.dart';
 
 import '../../utils/constants/sizes.dart';
 import '../../utils/constants/styles.dart';
@@ -19,8 +20,8 @@ class BoxHeadingContainer extends StatelessWidget {
 
         // H E A D I N G
         children: [
-          Text(
-            topic,
+          TextsWidget(
+            text: topic,
             style: AppStyles.titleMedium,
           ),
           TextButton(

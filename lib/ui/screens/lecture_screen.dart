@@ -8,6 +8,7 @@ import 'package:ui_mobile/utils/constants/routes.dart';
 import 'package:ui_mobile/utils/constants/sizes.dart';
 import 'package:ui_mobile/utils/constants/strings.dart';
 import 'package:ui_mobile/utils/constants/styles.dart';
+import 'package:ui_mobile/utils/themes/texts.dart';
 
 class LectureScreen extends StatelessWidget {
   const LectureScreen({super.key});
@@ -65,13 +66,12 @@ class LectureScreen extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.end,
                               spacing: AppSizes.spacingXS,
                               children: [
-                                Text(
-                                  // 'English',
-                                  sub[0],
+                                TextsWidget(
+                                  text: sub[0],
                                   style: AppStyles.titleLarge,
                                 ),
-                                Text(
-                                  AppStrings.lectureDuration,
+                                TextsWidget(
+                                  text: AppStrings.lectureDuration,
                                   style: AppStyles.bodySmall,
                                 ),
                               ],
@@ -156,21 +156,21 @@ class LectureScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       spacing: AppSizes.spacingMD,
                       children: [
-                        Text(
-                          'Easter Howard',
+                        TextsWidget(
+                          text: AppStrings.easterHoward,
                           style: AppStyles.labelLarge,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(
-                              "Haha that's terrifying",
+                            TextsWidget(
+                              text: AppStrings.terrifying,
                               style: AppStyles.labelMedium,
                             ),
-                            Text(
-                              '9.27am',
+                            TextsWidget(
+                              text: AppStrings.time9,
                               style: AppStyles.labelMedium,
-                            )
+                            ),
                           ],
                         ),
                         Row(
@@ -205,7 +205,7 @@ class LectureScreen extends StatelessWidget {
                                         borderSide: BorderSide.none,
                                         borderRadius: BorderRadius.circular(
                                             AppSizes.radiusXL)),
-                                    hintText: 'Text message..'),
+                                    hintText: AppStrings.textMsg),
                               ),
                             )
                           ],

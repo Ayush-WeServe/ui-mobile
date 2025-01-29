@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ui_mobile/ui/widgets/icon_button_container.dart';
 import 'package:ui_mobile/utils/constants/routes.dart';
+import 'package:ui_mobile/utils/themes/texts.dart';
 import '../../utils/constants/images.dart';
 import '../../utils/constants/sizes.dart';
 import '../../utils/constants/strings.dart';
@@ -31,12 +32,12 @@ class HomeScreenHeading extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text(
-                  AppStrings.ericaHawkins,
+                TextsWidget(
+                  text: AppStrings.ericaHawkins,
                   style: AppStyles.titleSmall,
                 ),
-                Text(
-                  AppStrings.grade,
+                TextsWidget(
+                  text: AppStrings.grade,
                   style: AppStyles.labelMedium,
                 )
               ],

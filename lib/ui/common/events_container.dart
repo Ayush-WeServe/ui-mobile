@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ui_mobile/ui/widgets/icon_button_container.dart';
 import 'package:ui_mobile/utils/constants/sizes.dart';
 import 'package:ui_mobile/utils/constants/styles.dart';
+import 'package:ui_mobile/utils/themes/texts.dart';
 
 class EventsContainer extends StatelessWidget {
   final String img;
@@ -42,14 +43,14 @@ class EventsContainer extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        title,
+                      TextsWidget(
+                        text: title,
                         style: AppStyles.labelLarge,
                       ),
-                      Text(
-                        dateTime,
+                      TextsWidget(
+                        text: dateTime,
                         style: AppStyles.labelSmall,
-                      )
+                      ),
                     ],
                   ),
                   IconButtonContainer(

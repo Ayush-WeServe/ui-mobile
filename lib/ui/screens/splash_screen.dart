@@ -5,6 +5,7 @@ import 'package:ui_mobile/utils/constants/routes.dart';
 import 'package:ui_mobile/utils/constants/sizes.dart';
 import 'package:ui_mobile/utils/constants/strings.dart';
 import 'package:ui_mobile/utils/constants/styles.dart';
+import 'package:ui_mobile/utils/themes/texts.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -21,22 +22,17 @@ class SplashScreen extends StatelessWidget {
               flex: 5,
               child: Center(child: Image.asset(AppImages.splash)),
             ),
-            Column(
-              spacing: AppSizes.spacingMD,
-              children: [
-                Text(
-                  AppStrings.headLine,
-                  style: AppStyles.heading,
-                  textAlign: TextAlign.center,
-                ),
-                Expanded(
-                  child: Text(
-                    AppStrings.subTitle,
-                    style: AppStyles.smallHeading,
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-              ],
+            Expanded(
+              flex: 2,
+              child: Column(
+                spacing: AppSizes.spacingSM,
+                children: [
+                  TextsWidget(
+                      text: AppStrings.headLine, style: AppStyles.heading),
+                  TextsWidget(
+                      text: AppStrings.headLine, style: AppStyles.smallHeading),
+                ],
+              ),
             ),
             CustomElevatedButton(
                 text: AppStrings.letsStart, route: AppRouteNames.nav),

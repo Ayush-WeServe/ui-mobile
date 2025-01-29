@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ui_mobile/utils/themes/texts.dart';
 import '../../utils/constants/colors.dart';
 import '../../utils/constants/sizes.dart';
 
@@ -39,8 +40,8 @@ class CustomElevatedButton extends StatelessWidget {
                     ),
                   ),
                 ),
-                Text(
-                  text,
+                TextsWidget(
+                  text: text,
                   style: TextStyle(
                       fontSize: AppSizes.fontsBodySmall,
                       color: AppColors.lightScaffold),

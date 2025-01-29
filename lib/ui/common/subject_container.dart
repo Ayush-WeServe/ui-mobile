@@ -4,6 +4,7 @@ import 'package:ui_mobile/utils/constants/colors.dart';
 import 'package:ui_mobile/utils/constants/sizes.dart';
 import 'package:ui_mobile/utils/constants/strings.dart';
 import 'package:ui_mobile/utils/constants/styles.dart';
+import 'package:ui_mobile/utils/themes/texts.dart';
 
 class SubjectContainer extends StatelessWidget {
   final IconData icon;
@@ -67,9 +68,7 @@ class SubjectContainer extends StatelessWidget {
                           child: Row(
                             spacing: AppSizes.paddingSM,
                             children: [
-                              Text(
-                                AppStrings.homework,
-                              ),
+                              TextsWidget(text: AppStrings.homework),
                               Icon(homeWorkStatus
                                   ? Icons.check_circle_rounded
                                   : Icons.remove_circle_rounded)
@@ -88,12 +87,12 @@ class SubjectContainer extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      subject,
+                    TextsWidget(
+                      text: subject,
                       style: AppStyles.bodyLarge,
                     ),
-                    Text(
-                      dateTime,
+                    TextsWidget(
+                      text: dateTime,
                       style: AppStyles.labelSmall,
                     ),
                   ],
@@ -113,10 +112,10 @@ class SubjectContainer extends StatelessWidget {
                           width: AppSizes.imageXS,
                         ),
                       ),
-                      Text(
-                        professor,
+                      TextsWidget(
+                        text: professor,
                         style: AppStyles.bodySmall,
-                      )
+                      ),
                     ]),
               )
             ],

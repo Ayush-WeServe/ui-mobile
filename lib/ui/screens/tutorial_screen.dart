@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:ui_mobile/ui/widgets/box_heading_container.dart';
 import 'package:ui_mobile/ui/widgets/task_list.dart';
 import 'package:ui_mobile/utils/constants/strings.dart';
+import 'package:ui_mobile/utils/themes/texts.dart';
 
 import '../../utils/constants/colors.dart';
 import '../../utils/constants/routes.dart';
@@ -19,8 +20,8 @@ class TutorialScreen extends StatelessWidget {
     final String subject = Get.arguments;
     return Scaffold(
         appBar: AppBar(
-          title: Text(
-            subject,
+          title: TextsWidget(
+            text: subject,
             // 'heell',
             style: AppStyles.bodyLarge,
           ),

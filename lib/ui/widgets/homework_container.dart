@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:ui_mobile/ui/widgets/homework_container_button.dart';
 import 'package:ui_mobile/ui/widgets/icon_container.dart';
 import 'package:ui_mobile/utils/constants/routes.dart';
+import 'package:ui_mobile/utils/themes/texts.dart';
 import '../../utils/constants/sizes.dart';
 import '../../utils/constants/styles.dart';
 
@@ -42,12 +43,12 @@ class HomeworkContainer extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          subject,
+                        TextsWidget(
+                          text: subject,
                           style: AppStyles.labelMedium,
                         ),
-                        Text(
-                          time,
+                        TextsWidget(
+                          text: time,
                           style: AppStyles.labelSmall,
                         )
                       ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_mobile/utils/constants/strings.dart';
+import 'package:ui_mobile/utils/themes/texts.dart';
 
 import '../../utils/constants/sizes.dart';
 import '../../utils/constants/styles.dart';
@@ -17,12 +18,12 @@ class HomeworkHeading extends StatelessWidget {
         Row(
           spacing: AppSizes.spacingSM,
           children: [
-            Text(
-              AppStrings.date1,
+            TextsWidget(
+              text: AppStrings.date1,
               style: AppStyles.labelLarge,
             ),
-            Text(
-              AppStrings.taskList,
+            TextsWidget(
+              text: AppStrings.taskList,
               style: AppStyles.labelSmall,
             ),
           ],

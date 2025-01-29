@@ -2,6 +2,7 @@ import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
 import 'package:ui_mobile/ui/widgets/subject_tile.dart';
 import 'package:ui_mobile/utils/constants/sizes.dart';
+import 'package:ui_mobile/utils/themes/texts.dart';
 
 class TimeTable extends StatelessWidget {
   final String time;
@@ -31,7 +32,11 @@ class TimeTable extends StatelessWidget {
             flex: 1,
             child: Column(
               spacing: AppSizes.spacingMD,
-              children: [Text(time)],
+              children: [
+                TextsWidget(
+                  text: time,
+                )
+              ],
             ),
           ),
           Expanded(

@@ -6,7 +6,7 @@ import 'package:ui_mobile/utils/constants/routes.dart';
 import 'package:ui_mobile/utils/constants/sizes.dart';
 import 'package:ui_mobile/utils/constants/strings.dart';
 import 'package:ui_mobile/utils/constants/styles.dart';
-
+import 'package:ui_mobile/utils/themes/texts.dart';
 import '../common/notification_widget.dart';
 
 class NotificationsScreen extends StatelessWidget {
@@ -16,10 +16,8 @@ class NotificationsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          AppStrings.notifications,
-          style: AppStyles.bodyLarge,
-        ),
+        title: TextsWidget(
+            text: AppStrings.notifications, style: AppStyles.bodyLarge),
         leading: Padding(
           padding: const EdgeInsets.all(AppSizes.paddingXS),
           child: IconButtonContainer(
@@ -43,7 +41,7 @@ class NotificationsScreen extends StatelessWidget {
             spacing: AppSizes.paddingXS,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(AppStrings.today),
+              TextsWidget(text: AppStrings.today),
               SizedBox(
                 height: AppSizes.spacingSM,
               ),
@@ -68,7 +66,7 @@ class NotificationsScreen extends StatelessWidget {
               SizedBox(
                 height: AppSizes.spacingSM,
               ),
-              Text(AppStrings.yesterday),
+              TextsWidget(text: AppStrings.yesterday),
               SizedBox(
                 height: AppSizes.spacingSM,
               ),
@@ -93,7 +91,7 @@ class NotificationsScreen extends StatelessWidget {
               SizedBox(
                 height: AppSizes.spacingSM,
               ),
-              Text(AppStrings.date),
+              TextsWidget(text: AppStrings.date),
               SizedBox(
                 height: AppSizes.spacingSM,
               ),

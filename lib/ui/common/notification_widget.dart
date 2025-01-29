@@ -5,6 +5,7 @@ import 'package:ui_mobile/utils/constants/colors.dart';
 import 'package:ui_mobile/utils/constants/images.dart';
 import 'package:ui_mobile/utils/constants/strings.dart';
 import 'package:ui_mobile/utils/constants/styles.dart';
+import 'package:ui_mobile/utils/themes/texts.dart';
 
 import '../../utils/constants/sizes.dart';
 
@@ -46,14 +47,12 @@ class NotificationWidget extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          subject,
+                        TextsWidget(
+                          text: subject,
                           style: AppStyles.labelLarge,
                         ),
-                        Text(
-                          message,
-                          style: AppStyles.labelMedium,
-                        )
+                        TextsWidget(
+                            text: message, style: AppStyles.labelMedium),
                       ],
                     ))
               ],
@@ -75,8 +74,8 @@ class NotificationWidget extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       IconButtonContainer(icon: icon, onTap: () {}),
-                      Text(
-                        message,
+                      TextsWidget(
+                        text: message,
                         style: AppStyles.bodyLarge,
                       ),
                       Container(
@@ -91,12 +90,12 @@ class NotificationWidget extends StatelessWidget {
                             spacing: AppSizes.spacingXS,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                subject,
+                              TextsWidget(
+                                text: subject,
                                 style: AppStyles.bodyLarge,
                               ),
-                              Text(
-                                AppStrings.time1,
+                              TextsWidget(
+                                text: AppStrings.time1,
                                 style: AppStyles.bodyMedium,
                               ),
                               Row(
@@ -110,7 +109,7 @@ class NotificationWidget extends StatelessWidget {
                                       height: AppSizes.imageXS,
                                     ),
                                   ),
-                                  Text(AppStrings.professor)
+                                  TextsWidget(text: AppStrings.professor),
                                 ],
                               )
                             ],
