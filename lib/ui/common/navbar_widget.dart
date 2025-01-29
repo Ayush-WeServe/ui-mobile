@@ -7,7 +7,7 @@ import 'package:ui_mobile/ui/screens/schedule_screen.dart';
 import '../../controllers/nav_controller.dart';
 
 class NavBarWidget extends StatelessWidget {
-  final NavBarController controller = Get.put(NavBarController());
+  NavBarWidget({super.key});
 
   final List<Widget> pages = [
     HomeScreen(),
@@ -18,6 +18,7 @@ class NavBarWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = NavBarController.instance;
     return Obx(
       () => Scaffold(
         body: pages[controller.selectedIndex.value],
