@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:ui_mobile/bindings/homework_status_binding.dart';
+import 'package:ui_mobile/bindings/library_binding.dart';
 import 'package:ui_mobile/bindings/tab_binding.dart';
 import 'package:ui_mobile/ui/common/tab_bar_widget.dart';
 import 'package:ui_mobile/ui/screens/chat_screen.dart';
@@ -60,13 +61,17 @@ class AppRoutes {
       page: () => LectureScreen(),
     ),
     GetPage(
+      name: AppRouteNames.notification,
+      page: () => NotificationsScreen(),
+    ),
+    GetPage(
+      name: AppRouteNames.subjectScreen,
+      page: () => SubjectsDetailScreen(),
+    ),
+    GetPage(
         name: AppRouteNames.nav,
         page: () => NavBarWidget(),
-        bindings: [NavBinding(), HomeworkStatusBinding()]),
-    GetPage(
-        name: AppRouteNames.notification, page: () => NotificationsScreen()),
-    GetPage(
-        name: AppRouteNames.subjectScreen, page: () => SubjectsDetailScreen()),
+        bindings: [NavBinding(), LibraryBinding(), HomeworkStatusBinding()]),
   ];
 }
 

@@ -37,15 +37,17 @@ class TutorialScreen extends StatelessWidget {
           ),
           backgroundColor: AppColors.lightScaffold,
         ),
-        body: Padding(
-          padding: const EdgeInsets.symmetric(
-              horizontal: AppSizes.paddingMD, vertical: AppSizes.paddingMD),
-          child: Column(
-            children: [
-              BoxHeadingContainer(topic: AppStrings.lessonTutorial),
-              LessonsWidget(),
-              TaskList(),
-            ],
+        body: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(
+                horizontal: AppSizes.paddingMD, vertical: AppSizes.paddingMD),
+            child: Column(
+              children: [
+                BoxHeadingContainer(topic: AppStrings.lessonTutorial),
+                LessonsWidget(),
+                TaskList(),
+              ],
+            ),
           ),
         ));
   }

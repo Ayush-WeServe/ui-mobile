@@ -33,81 +33,83 @@ class NotificationsScreen extends StatelessWidget {
           IconButton(onPressed: () {}, icon: Icon(Icons.check_rounded))
         ],
       ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(
-              horizontal: AppSizes.paddingMD, vertical: AppSizes.paddingSM),
-          child: Column(
-            spacing: AppSizes.paddingXS,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              TextsWidget(text: AppStrings.today),
-              SizedBox(
-                height: AppSizes.spacingSM,
-              ),
-              NotificationWidget(
-                icon: Icons.calculate,
-                subject: AppStrings.basicMath,
-                message: AppStrings.gotA,
-                backColor: AppColors.lightBlueBackground,
-              ),
-              NotificationWidget(
-                icon: Icons.book_sharp,
-                subject: AppStrings.englishGramer,
-                message: AppStrings.unfinished,
-                backColor: AppColors.lightGreen,
-              ),
-              NotificationWidget(
-                icon: Icons.wordpress_outlined,
-                subject: AppStrings.wordHistory,
-                message: AppStrings.congrats,
-                backColor: AppColors.lightPink,
-              ),
-              SizedBox(
-                height: AppSizes.spacingSM,
-              ),
-              TextsWidget(text: AppStrings.yesterday),
-              SizedBox(
-                height: AppSizes.spacingSM,
-              ),
-              NotificationWidget(
-                icon: Icons.science_outlined,
-                subject: AppStrings.science,
-                message: AppStrings.gotD,
-                backColor: AppColors.lightYellow,
-              ),
-              NotificationWidget(
-                icon: Icons.wordpress_outlined,
-                subject: AppStrings.wordHistory,
-                message: AppStrings.unfinished,
-                backColor: AppColors.lightGreen,
-              ),
-              NotificationWidget(
-                icon: Icons.calculate_outlined,
-                subject: AppStrings.basicMath,
-                message: AppStrings.gotA,
-                backColor: AppColors.lightPink,
-              ),
-              SizedBox(
-                height: AppSizes.spacingSM,
-              ),
-              TextsWidget(text: AppStrings.date),
-              SizedBox(
-                height: AppSizes.spacingSM,
-              ),
-              NotificationWidget(
-                icon: Icons.calculate,
-                subject: AppStrings.basicMath,
-                message: AppStrings.gotB,
-                backColor: AppColors.lightBlueBackground,
-              ),
-              NotificationWidget(
-                icon: Icons.book_sharp,
-                subject: AppStrings.englishGramer,
-                message: AppStrings.unfinished,
-                backColor: AppColors.lightGreen,
-              ),
-            ],
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(
+                horizontal: AppSizes.paddingMD, vertical: AppSizes.paddingSM),
+            child: Column(
+              spacing: AppSizes.paddingXS,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                TextsWidget(text: AppStrings.today),
+                SizedBox(
+                  height: AppSizes.spacingSM,
+                ),
+                NotificationWidget(
+                  icon: Icons.calculate,
+                  subject: AppStrings.basicMath,
+                  message: AppStrings.gotA,
+                  backColor: AppColors.lightBlueBackground,
+                ),
+                NotificationWidget(
+                  icon: Icons.book_sharp,
+                  subject: AppStrings.englishGramer,
+                  message: AppStrings.unfinished,
+                  backColor: AppColors.lightGreen,
+                ),
+                NotificationWidget(
+                  icon: Icons.wordpress_outlined,
+                  subject: AppStrings.wordHistory,
+                  message: AppStrings.congrats,
+                  backColor: AppColors.lightPink,
+                ),
+                SizedBox(
+                  height: AppSizes.spacingSM,
+                ),
+                TextsWidget(text: AppStrings.yesterday),
+                SizedBox(
+                  height: AppSizes.spacingSM,
+                ),
+                NotificationWidget(
+                  icon: Icons.science_outlined,
+                  subject: AppStrings.science,
+                  message: AppStrings.gotD,
+                  backColor: AppColors.lightYellow,
+                ),
+                NotificationWidget(
+                  icon: Icons.wordpress_outlined,
+                  subject: AppStrings.wordHistory,
+                  message: AppStrings.unfinished,
+                  backColor: AppColors.lightGreen,
+                ),
+                NotificationWidget(
+                  icon: Icons.calculate_outlined,
+                  subject: AppStrings.basicMath,
+                  message: AppStrings.gotA,
+                  backColor: AppColors.lightPink,
+                ),
+                SizedBox(
+                  height: AppSizes.spacingSM,
+                ),
+                TextsWidget(text: AppStrings.date),
+                SizedBox(
+                  height: AppSizes.spacingSM,
+                ),
+                NotificationWidget(
+                  icon: Icons.calculate,
+                  subject: AppStrings.basicMath,
+                  message: AppStrings.gotB,
+                  backColor: AppColors.lightBlueBackground,
+                ),
+                NotificationWidget(
+                  icon: Icons.book_sharp,
+                  subject: AppStrings.englishGramer,
+                  message: AppStrings.unfinished,
+                  backColor: AppColors.lightGreen,
+                ),
+              ],
+            ),
           ),
         ),
       ),

@@ -91,4 +91,14 @@ class AppStyles {
       fontWeight: FontWeight.w400,
       fontSize: AppSizes.fontsLabelSmall,
       overflow: TextOverflow.ellipsis);
+
+  static final TextStyle? imgTitle = TextStyle(
+    fontWeight: FontWeight.bold,
+    fontSize: 12,
+  );
+
+  static final TextStyle? imgPrice = TextStyle(
+      fontWeight: FontWeight.w600,
+      fontSize: 16,
+      overflow: TextOverflow.ellipsis);
 }

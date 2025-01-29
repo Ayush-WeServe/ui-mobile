@@ -13,30 +13,39 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(AppSizes.paddingMD),
-        child: Column(
-          spacing: AppSizes.paddingMD,
-          children: [
-            Expanded(
-              flex: 5,
-              child: Center(child: Image.asset(AppImages.splash)),
-            ),
-            Expanded(
-              flex: 2,
-              child: Column(
-                spacing: AppSizes.spacingSM,
-                children: [
-                  TextsWidget(
-                      text: AppStrings.headLine, style: AppStyles.heading),
-                  TextsWidget(
-                      text: AppStrings.headLine, style: AppStyles.smallHeading),
-                ],
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(AppSizes.paddingMD),
+          child: Column(
+            spacing: AppSizes.paddingMD,
+            children: [
+              Expanded(
+                flex: 5,
+                child: Center(child: Image.asset(AppImages.splash)),
               ),
-            ),
-            CustomElevatedButton(
-                text: AppStrings.letsStart, route: AppRouteNames.nav),
-          ],
+              Expanded(
+                flex: 2,
+                child: Column(
+                  spacing: AppSizes.spacingSM,
+                  children: [
+                    TextsWidget(
+                      text: AppStrings.headLine,
+                      style: AppStyles.heading,
+                      textAlignCenter: TextAlign.center,
+                    ),
+                    TextsWidget(
+                        text: AppStrings.headLine,
+                        style: AppStyles.smallHeading),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(bottom: AppSizes.paddingXL),
+                child: CustomElevatedButton(
+                    text: AppStrings.letsStart, route: AppRouteNames.nav),
+              ),
+            ],
+          ),
         ),
       ),
     );

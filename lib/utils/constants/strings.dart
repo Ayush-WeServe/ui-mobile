@@ -38,7 +38,7 @@ class AppStrings {
 
   static const String homework = "Homework";
   static const String chatScreen = "Chat Screen";
-  static const String libraryScreen = "Library screen";
+  static const String libraryPage = "Library Page";
 
   // H I N T   T E X T
   static const String search = "Search";
@@ -114,4 +114,7 @@ class AppStrings {
 
   static const String uploaded = "Uploaded";
   static const String todo = "To Do";
+
+  static const String error = '=================Error Occured=================';
+  static const String networkError = 'Network Error!!';
 }

@@ -15,56 +15,58 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(AppSizes.paddingSM),
-          child: Column(
-            spacing: AppSizes.spacingSM,
-            children: [
-              // H E A D I N G
-              HomeScreenHeading(),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(AppSizes.paddingSM),
+            child: Column(
+              spacing: AppSizes.spacingSM,
+              children: [
+                // H E A D I N G
+                HomeScreenHeading(),
 
-              // S E A R C H F I E L D
-              SearchbarWidget(),
+                // S E A R C H F I E L D
+                SearchbarWidget(),
 
-              // C L A S S   C O N T A I N E R
-              BoxHeadingContainer(topic: AppStrings.nextClassLabel),
-              SubjectContainer(
-                subject: AppStrings.basicMath,
-                dateTime: AppStrings.lectureTime,
-                professor: AppStrings.jane,
-                profileImage: AppImages.jane,
-                icon: Icons.calculate,
-                homeWorkStatus: true,
-                containerColor: AppColors.lightBlueBackground,
-              ),
+                // C L A S S   C O N T A I N E R
+                BoxHeadingContainer(topic: AppStrings.nextClassLabel),
+                SubjectContainer(
+                  subject: AppStrings.basicMath,
+                  dateTime: AppStrings.lectureTime,
+                  professor: AppStrings.jane,
+                  profileImage: AppImages.jane,
+                  icon: Icons.calculate,
+                  homeWorkStatus: true,
+                  containerColor: AppColors.lightBlueBackground,
+                ),
 
-              // E V E N T S
-              BoxHeadingContainer(topic: AppStrings.eventsLabel),
-              Column(
-                spacing: AppSizes.spacingSM,
-                children: [
-                  EventsContainer(
-                    img: AppImages.dance,
-                    title: AppStrings.danceShow,
-                    dateTime: AppStrings.dateTime,
-                    color: AppColors.lightPink,
-                  ),
-                  EventsContainer(
-                    img: AppImages.djParty,
-                    title: AppStrings.djParty,
-                    dateTime: AppStrings.dateTime,
-                    color: AppColors.lightGreen,
-                  ),
-                  EventsContainer(
-                    img: AppImages.singing,
-                    title: AppStrings.danceShow,
-                    dateTime: AppStrings.dateTime,
-                    color: AppColors.lightYellow,
-                  ),
-                ],
-              ),
-            ],
+                // E V E N T S
+                BoxHeadingContainer(topic: AppStrings.eventsLabel),
+                Column(
+                  spacing: AppSizes.spacingSM,
+                  children: [
+                    EventsContainer(
+                      img: AppImages.dance,
+                      title: AppStrings.danceShow,
+                      dateTime: AppStrings.dateTime,
+                      color: AppColors.lightPink,
+                    ),
+                    EventsContainer(
+                      img: AppImages.djParty,
+                      title: AppStrings.djParty,
+                      dateTime: AppStrings.dateTime,
+                      color: AppColors.lightGreen,
+                    ),
+                    EventsContainer(
+                      img: AppImages.singing,
+                      title: AppStrings.danceShow,
+                      dateTime: AppStrings.dateTime,
+                      color: AppColors.lightYellow,
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),

@@ -52,82 +52,84 @@ class SubjectsDetailScreen extends StatelessWidget {
           ),
           backgroundColor: AppColors.lightScaffold,
         ),
-        body: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(
-                horizontal: AppSizes.paddingMD, vertical: AppSizes.paddingMD),
-            child: Column(
-              spacing: AppSizes.spacingSM,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                TextsWidget(
-                  text: AppStrings.student,
-                  style: AppStyles.bodyLarge,
-                ),
-                ImageStack(
-                  imageList: images,
-                  totalCount: images.length,
-                  imageRadius: AppSizes.imageXS,
-                  imageCount: 3,
-                  imageBorderWidth: 1,
-                ),
-                TextsWidget(text: AppStrings.lessonTheme),
-                TextsWidget(text: AppStrings.review),
-                TextsWidget(
-                  text: AppStrings.additionalMaterial,
-                  style: AppStyles.bodyLarge,
-                ),
-                Row(
-                  spacing: AppSizes.spacingSM,
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(AppSizes.radiusMD),
-                      child: Image.asset(
-                        AppImages.engBook,
-                        height: AppSizes.imageLG,
-                      ),
-                    ),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(AppSizes.radiusMD),
-                      child: Image.asset(
-                        AppImages.advanceEngBook,
-                        height: AppSizes.imageLG,
-                      ),
-                    ),
-                  ],
-                ),
-                TextsWidget(
-                  text: AppStrings.homework,
-                  style: AppStyles.bodyLarge,
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(AppSizes.radiusLG),
-                      color: AppColors.inputFieldColor),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: AppSizes.paddingSM,
-                        vertical: AppSizes.paddingSM),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      spacing: AppSizes.paddingSM,
-                      children: [
-                        TextsWidget(
-                          text: AppStrings.attached,
-                          style: AppStyles.labelLarge,
+        body: SafeArea(
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(
+                  horizontal: AppSizes.paddingMD, vertical: AppSizes.paddingMD),
+              child: Column(
+                spacing: AppSizes.spacingSM,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  TextsWidget(
+                    text: AppStrings.student,
+                    style: AppStyles.bodyLarge,
+                  ),
+                  ImageStack(
+                    imageList: images,
+                    totalCount: images.length,
+                    imageRadius: AppSizes.imageXS,
+                    imageCount: 3,
+                    imageBorderWidth: 1,
+                  ),
+                  TextsWidget(text: AppStrings.lessonTheme),
+                  TextsWidget(text: AppStrings.review),
+                  TextsWidget(
+                    text: AppStrings.additionalMaterial,
+                    style: AppStyles.bodyLarge,
+                  ),
+                  Row(
+                    spacing: AppSizes.spacingSM,
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(AppSizes.radiusMD),
+                        child: Image.asset(
+                          AppImages.engBook,
+                          height: AppSizes.imageLG,
                         ),
-                        Icon(Icons.check_circle_rounded)
-                      ],
+                      ),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(AppSizes.radiusMD),
+                        child: Image.asset(
+                          AppImages.advanceEngBook,
+                          height: AppSizes.imageLG,
+                        ),
+                      ),
+                    ],
+                  ),
+                  TextsWidget(
+                    text: AppStrings.homework,
+                    style: AppStyles.bodyLarge,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(AppSizes.radiusLG),
+                        color: AppColors.inputFieldColor),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: AppSizes.paddingSM,
+                          vertical: AppSizes.paddingSM),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        spacing: AppSizes.paddingSM,
+                        children: [
+                          TextsWidget(
+                            text: AppStrings.attached,
+                            style: AppStyles.labelLarge,
+                          ),
+                          Icon(Icons.check_circle_rounded)
+                        ],
+                      ),
                     ),
                   ),
-                ),
-                Center(
-                    child: CustomElevatedButton(
-                  text: AppStrings.joinClass,
-                  route: AppRouteNames.lectureScreen,
-                  arg: subject,
-                ))
-              ],
+                  Center(
+                      child: CustomElevatedButton(
+                    text: AppStrings.joinClass,
+                    route: AppRouteNames.lectureScreen,
+                    arg: subject,
+                  ))
+                ],
+              ),
             ),
           ),
         ));
