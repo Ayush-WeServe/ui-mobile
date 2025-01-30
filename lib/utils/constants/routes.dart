@@ -3,6 +3,7 @@ import 'package:ui_mobile/bindings/homework_status_binding.dart';
 import 'package:ui_mobile/bindings/library_binding.dart';
 import 'package:ui_mobile/bindings/tab_binding.dart';
 import 'package:ui_mobile/ui/common/tab_bar_widget.dart';
+import 'package:ui_mobile/ui/screens/books_details_screen.dart';
 import 'package:ui_mobile/ui/screens/chat_screen.dart';
 import 'package:ui_mobile/ui/screens/homeWork_screen.dart';
 import 'package:ui_mobile/ui/screens/lecture_screen.dart';
@@ -69,6 +70,10 @@ class AppRoutes {
       page: () => SubjectsDetailScreen(),
     ),
     GetPage(
+      name: AppRouteNames.booksDetailsScreen,
+      page: () => BooksDetailsScreen(),
+    ),
+    GetPage(
         name: AppRouteNames.nav,
         page: () => NavBarWidget(),
         bindings: [NavBinding(), LibraryBinding(), HomeworkStatusBinding()]),
@@ -84,10 +89,11 @@ class AppRouteNames {
   static const String schedule = '/schedule';
   static const String chat = '/chat';
   static const String notification = '/notification-screen';
-  static const String subjectScreen = '/Subject-Details';
+  static const String subjectScreen = '/subject-Details';
   static const String lectureScreen = '/lecture-Screen';
-  static const String tabBar = '/TabBar-Widget';
+  static const String tabBar = '/tabBar-Widget';
   static const String homeworkScreen = '/homework-Screen';
   static const String libraryScreen = '/library-Screen';
   static const String tutorialScreen = '/tutorial-Screen';
+  static const String booksDetailsScreen = '/books-details-Screen';
 }

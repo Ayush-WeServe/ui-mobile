@@ -31,6 +31,7 @@ class SplashScreen extends StatelessWidget {
                     TextsWidget(
                       text: AppStrings.headLine,
                       style: AppStyles.heading,
+                      overflow: TextOverflow.visible,
                       textAlignCenter: TextAlign.center,
                     ),
                     TextsWidget(

@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      defaultTransition: Transition.leftToRight,
+      defaultTransition: Transition.rightToLeft,
       theme: AppThemes.lightTheme,
       getPages: AppRoutes.routes,
       initialRoute: AppRouteNames.splash,
