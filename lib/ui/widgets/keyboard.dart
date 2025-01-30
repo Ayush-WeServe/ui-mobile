@@ -1,25 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:ui_mobile/utils/constants/colors.dart';
-import 'package:ui_mobile/utils/constants/sizes.dart';
-import 'package:ui_mobile/utils/constants/strings.dart';
 
-class SearchbarWidget extends StatelessWidget {
-  final ValueChanged<String>? onChanged;
+import '../../utils/constants/colors.dart';
+import '../../utils/constants/sizes.dart';
+import '../../utils/constants/strings.dart';
 
-  const SearchbarWidget({super.key, this.onChanged});
+class Keyboard extends StatelessWidget {
+  const Keyboard({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: AppSizes.paddingMD),
+      padding: const EdgeInsets.all(AppSizes.paddingMD),
       child: Container(
         decoration: BoxDecoration(
-            color: AppColors.inputFieldColor,
-            borderRadius: BorderRadius.circular(AppSizes.radiusLG)),
+          color: AppColors.inputFieldColor,
+          borderRadius: BorderRadius.circular(AppSizes.radiusMD),
+        ),
         child: TextField(
-          onChanged: onChanged,
           decoration: InputDecoration(
-              prefixIcon: Icon(Icons.search),
+              prefixIcon: Icon(Icons.keyboard_alt_outlined),
+              suffixIcon:
+                  IconButton(onPressed: () {}, icon: Icon(Icons.send_rounded)),
               enabledBorder: OutlineInputBorder(
                   borderSide: BorderSide.none,
                   borderRadius: BorderRadius.circular(AppSizes.radiusXL)),
@@ -32,7 +33,7 @@ class SearchbarWidget extends StatelessWidget {
               disabledBorder: OutlineInputBorder(
                   borderSide: BorderSide.none,
                   borderRadius: BorderRadius.circular(AppSizes.radiusXL)),
-              hintText: AppStrings.search),
+              hintText: AppStrings.entermsg),
         ),
       ),
     );

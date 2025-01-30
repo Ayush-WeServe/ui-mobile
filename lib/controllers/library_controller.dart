@@ -10,6 +10,8 @@ class LibraryController extends GetxController {
   RxList<Books> books = <Books>[].obs;
   RxBool isLoading = false.obs;
 
+  RxList<Books> searchedBook = <Books>[].obs;
+
   final Dio _dio = Dio();
 
   toggleGrid() {
@@ -41,9 +43,27 @@ class LibraryController extends GetxController {
     }
   }
 
+  void findBook(String enteredKey) {
+    RxList<Books> result = <Books>[].obs;
+
+    if (enteredKey.isEmpty) {
+      result.assignAll(books);
+    } else {
+      result.assignAll(
+        books
+            .where((book) =>
+                book.title!.toLowerCase().contains(enteredKey.toLowerCase()))
+            .toList(),
+      );
+    }
+
+    books.value = result; // Update the observable list
+  }
+
   @override
   void onInit() {
     super.onInit();
     fetchData();
+    searchedBook = books;
   }
 }

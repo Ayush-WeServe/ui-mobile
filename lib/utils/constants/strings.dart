@@ -42,6 +42,7 @@ class AppStrings {
 
   // H I N T   T E X T
   static const String search = "Search";
+  static const String entermsg = "Enter Message...";
   static const String subjects = "Subjects";
   static const String library = "Library";
   static const String textMsg = "'Text message..'";
@@ -60,6 +61,8 @@ class AppStrings {
   static const String additionalMaterial = "Additional Materials";
   static const String attached = "Attached";
   static const String doneTask = "Done 1/3'";
+
+  static const String messages = "Messages";
 
   // B U T T O N   T E X T
   static const String joinClass = "Join Class";

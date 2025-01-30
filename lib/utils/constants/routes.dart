@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:ui_mobile/bindings/chat_binding.dart';
 import 'package:ui_mobile/bindings/homework_status_binding.dart';
 import 'package:ui_mobile/bindings/library_binding.dart';
 import 'package:ui_mobile/bindings/tab_binding.dart';
@@ -73,10 +74,12 @@ class AppRoutes {
       name: AppRouteNames.booksDetailsScreen,
       page: () => BooksDetailsScreen(),
     ),
-    GetPage(
-        name: AppRouteNames.nav,
-        page: () => NavBarWidget(),
-        bindings: [NavBinding(), LibraryBinding(), HomeworkStatusBinding()]),
+    GetPage(name: AppRouteNames.nav, page: () => NavBarWidget(), bindings: [
+      NavBinding(),
+      LibraryBinding(),
+      HomeworkStatusBinding(),
+      ChatBinding()
+    ]),
   ];
 }
 

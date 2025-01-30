@@ -8,9 +8,9 @@ import '../widgets/icon_button_container.dart';
 
 class AppAppbar extends StatelessWidget implements PreferredSizeWidget {
   final String text;
-  final String page;
+  final String? page;
 
-  const AppAppbar({super.key, required this.text, required this.page});
+  const AppAppbar({super.key, required this.text, this.page});
 
   @override
   Widget build(BuildContext context) {
@@ -24,14 +24,17 @@ class AppAppbar extends StatelessWidget implements PreferredSizeWidget {
           ),
         ],
       ),
-      leading: Padding(
-        padding: const EdgeInsets.all(AppSizes.paddingXS),
-        child: IconButtonContainer(
-          icon: Icons.keyboard_arrow_left,
-          onTap: () {
-            Get.toNamed(page);
-          },
-          border: true,
+      leading: Visibility(
+        visible: page != null,
+        child: Padding(
+          padding: const EdgeInsets.all(AppSizes.paddingXS),
+          child: IconButtonContainer(
+            icon: Icons.keyboard_arrow_left,
+            onTap: () {
+              Get.toNamed(page!);
+            },
+            border: true,
+          ),
         ),
       ),
       backgroundColor: AppColors.lightScaffold,
